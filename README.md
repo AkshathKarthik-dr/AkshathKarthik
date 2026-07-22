@@ -74,6 +74,52 @@ This generates a fully static site in the `out/` folder (via `output: "export"` 
    the **Actions** tab.
 4. Your site will be live at `https://akshathkarthik.github.io/`.
 
+## Adding a blog post (no JSX/coding needed)
+
+Blog posts live as plain Markdown files in `content/blog/`. To publish a new one:
+
+1. Duplicate `content/blog/_template.md` in the same folder.
+2. Rename it to a URL-friendly slug, e.g. `content/blog/my-new-post.md` (this becomes
+   the page's web address: `/blog/my-new-post`).
+3. Edit the top section (between the `---` lines) — this is called "frontmatter":
+   ```
+   ---
+   title: "Your Post Title Here"
+   date: "2026-08-01"
+   tag: "Medicine"
+   excerpt: "One or two sentence summary shown on the blog listing page."
+   draft: true
+   ---
+   ```
+4. Write the post body below the second `---` using normal Markdown: `## ` for
+   subheadings, blank lines between paragraphs, `- ` for bullet points, `**bold**`,
+   `_italic_`, `[link text](https://...)`.
+5. When it's ready to go live, change `draft: true` to `draft: false`.
+6. Commit and push — the post appears automatically on `/blog` and gets its own page
+   at `/blog/your-slug`. No other file needs to change.
+
+The five starter posts already in `content/blog/` (AI in healthcare, cardiology, etc.)
+are set to `draft: true` — write the content and flip that flag when each is ready.
+
+## Adding an award (or similar list item)
+
+Several pages — Academics (Awards), Academics (Coursework, AP Classes, Certifications),
+Projects (skills), Research (interests) — are driven by a plain list near the top of
+their file, so adding an item means editing one line, not writing new layout code.
+
+Example — `app/academics/page.tsx`:
+```ts
+const AWARDS = [
+  { title: "Add your first award here", year: "2026" },
+  { title: "Add another award here", year: "2026" },
+];
+```
+To add an award, copy one line inside the brackets, edit the text and year, save,
+commit, push. The page automatically renders a new card for it — no other changes
+needed. The same pattern (a `const SOMETHING = [...]` array near the top of the file)
+is used for coursework, AP classes, certifications, project lists, and tags throughout
+the site.
+
 ## Adding your content
 
 - **Photo**: drop an image in `public/assets/images/` and reference it on the About page
@@ -84,7 +130,8 @@ This generates a fully static site in the `out/` folder (via `output: "export"` 
 - **Text content**: every page currently has clearly-marked placeholder copy — just
   search each `app/*/page.tsx` file and replace the placeholder paragraphs with your own
   writing.
-- **Email**: update the `mailto:` link in `app/contact/page.tsx`.
+- **Email**: already set to `AkshathKarthik@proton.me` in `app/contact/page.tsx` and
+  `components/Footer.tsx` — update both places if it ever changes.
 
 ## Design system
 

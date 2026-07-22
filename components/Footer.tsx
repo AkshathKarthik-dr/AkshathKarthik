@@ -65,12 +65,10 @@ export default function Footer() {
           <ul className="mt-3 space-y-2">
             <li>
               <a
-                href="https://github.com/AkshathKarthik"
-                target="_blank"
-                rel="noreferrer"
+                href="mailto:AkshathKarthik@proton.me"
                 className="focus-ring text-sm text-muted transition hover:text-accent"
               >
-                GitHub
+                Email
               </a>
             </li>
             <li>
@@ -85,7 +83,6 @@ export default function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} Akshath Karthik. All rights reserved.</p>
-          <p>Built with Next.js &middot; Deployed on GitHub Pages</p>
         </div>
       </div>
     </footer>

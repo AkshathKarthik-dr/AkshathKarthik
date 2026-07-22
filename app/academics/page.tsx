@@ -19,6 +19,12 @@ const CERTIFICATIONS = [
   "HIPAA Basics (planned)",
 ];
 
+// To add an award, copy one line below and edit the text and year.
+const AWARDS = [
+  { title: "Add your first award here", year: "2026" },
+  { title: "Add another award here", year: "2026" },
+];
+
 export default function Academics() {
   return (
     <>
@@ -76,12 +82,16 @@ export default function Academics() {
       </Section>
 
       <Section eyebrow="Recognition" title="Awards" className="bg-surface">
-        <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            List academic awards and honors here as they are earned &mdash; honor roll,
-            subject awards, competition results, and recognitions.
-          </p>
-        </Card>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {AWARDS.map((a) => (
+            <Card key={a.title} className="flex items-center justify-between gap-4">
+              <p className="text-sm font-medium text-foreground">{a.title}</p>
+              <span className="shrink-0 text-xs font-semibold uppercase tracking-[0.08em] text-muted">
+                {a.year}
+              </span>
+            </Card>
+          ))}
+        </div>
       </Section>
     </>
   );

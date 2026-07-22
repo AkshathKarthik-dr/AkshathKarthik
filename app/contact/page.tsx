@@ -12,29 +12,15 @@ export default function Contact() {
       />
 
       <Section eyebrow="Reach Out" title="Contact Details">
-        <div className="grid gap-5 sm:grid-cols-2">
-          <Card>
-            <h3 className="text-base font-semibold text-foreground">Email</h3>
-            <p className="mt-2 text-sm text-muted">
-              The best way to reach me directly.
-            </p>
-            <div className="mt-4">
-              <Button href="mailto:youremail@example.com">Send an Email</Button>
-            </div>
-          </Card>
-
-          <Card>
-            <h3 className="text-base font-semibold text-foreground">GitHub</h3>
-            <p className="mt-2 text-sm text-muted">
-              Explore code, projects, and this website&rsquo;s source.
-            </p>
-            <div className="mt-4">
-              <Button href="https://github.com/AkshathKarthik" variant="secondary">
-                Visit GitHub
-              </Button>
-            </div>
-          </Card>
-        </div>
+        <Card className="max-w-md">
+          <h3 className="text-base font-semibold text-foreground">Email</h3>
+          <p className="mt-2 text-sm text-muted">
+            The best way to reach me directly.
+          </p>
+          <div className="mt-4">
+            <Button href="mailto:AkshathKarthik@proton.me">Send an Email</Button>
+          </div>
+        </Card>
       </Section>
 
       <Section eyebrow="Coming Later" title="LinkedIn" className="bg-surface">

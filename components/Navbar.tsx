@@ -24,16 +24,16 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-5 py-4">
         <Link
           href="/"
-          className="focus-ring text-[15px] font-semibold tracking-[0.14em] text-foreground"
+          className="focus-ring shrink-0 text-[15px] font-semibold tracking-[0.14em] text-foreground"
           onClick={() => setOpen(false)}
         >
           AKSHATH&nbsp;KARTHIK
         </Link>
 
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="ml-auto hidden items-center gap-7 lg:flex">
           {LINKS.map((link) => {
             const active = pathname === link.href;
             return (

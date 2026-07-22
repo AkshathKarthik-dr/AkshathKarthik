@@ -1,0 +1,93 @@
+import Link from "next/link";
+import PulseDivider from "./PulseDivider";
+
+const LINKS = [
+  { href: "/about", label: "About" },
+  { href: "/academics", label: "Academics" },
+  { href: "/research", label: "Research" },
+  { href: "/healthcare", label: "Healthcare" },
+  { href: "/projects", label: "Projects" },
+  { href: "/leadership", label: "Leadership" },
+  { href: "/blog", label: "Blog" },
+  { href: "/resume", label: "Resume" },
+];
+
+export default function Footer() {
+  return (
+    <footer className="mt-24 border-t border-border bg-surface">
+      <div className="mx-auto max-w-6xl px-5 pt-10">
+        <PulseDivider className="max-w-[220px] opacity-70" />
+      </div>
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-12 pt-4 sm:grid-cols-2 md:grid-cols-4">
+        <div>
+          <p className="text-sm font-semibold tracking-[0.12em] text-foreground">
+            AKSHATH KARTHIK
+          </p>
+          <p className="mt-3 max-w-[220px] text-sm leading-relaxed text-muted">
+            Healthcare scholar and aspiring physician&ndash;scientist, Class of 2029.
+          </p>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+            Explore
+          </p>
+          <ul className="mt-3 space-y-2">
+            {LINKS.slice(0, 4).map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="focus-ring text-sm text-muted transition hover:text-accent">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+            More
+          </p>
+          <ul className="mt-3 space-y-2">
+            {LINKS.slice(4).map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="focus-ring text-sm text-muted transition hover:text-accent">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+            Connect
+          </p>
+          <ul className="mt-3 space-y-2">
+            <li>
+              <a
+                href="https://github.com/AkshathKarthik"
+                target="_blank"
+                rel="noreferrer"
+                className="focus-ring text-sm text-muted transition hover:text-accent"
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <Link href="/contact" className="focus-ring text-sm text-muted transition hover:text-accent">
+                Research Inquiry
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-border">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; {new Date().getFullYear()} Akshath Karthik. All rights reserved.</p>
+          <p>Built with Next.js &middot; Deployed on GitHub Pages</p>
+        </div>
+      </div>
+    </footer>
+  );
+}

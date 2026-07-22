@@ -4,13 +4,39 @@ export const metadata = { title: "Research | Akshath Karthik" };
 
 const INTERESTS = ["Neuroscience", "Cardiology", "Medical AI", "Diagnostic Imaging", "Genomics"];
 
+const PYTHON_PROJECTS = [
+  { title: "Clinical Symptom Tracker", desc: "Python tool for logging and visualizing patient-reported symptoms." },
+  { title: "Volunteer Hours Dashboard", desc: "A lightweight dashboard for tracking clinical volunteering and shadowing hours." },
+];
+
+const HEALTHCARE_APPS = [
+  { title: "Medication Reminder Concept", desc: "A concept app for helping patients track medication schedules." },
+];
+
+const SCIENCE_FAIR = [
+  { title: "Science Fair Project", desc: "Add title, hypothesis, methodology, and results here." },
+];
+
+function ProjectGrid({ items }: { items: { title: string; desc: string }[] }) {
+  return (
+    <div className="grid gap-5 sm:grid-cols-2">
+      {items.map((p) => (
+        <Card key={p.title}>
+          <h3 className="text-base font-semibold text-foreground">{p.title}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted">{p.desc}</p>
+        </Card>
+      ))}
+    </div>
+  );
+}
+
 export default function Research() {
   return (
     <>
       <PageHero
         eyebrow="Research"
-        title="Research"
-        description="Interests, mentorship, and the reading and projects shaping a path toward physician-scientist work."
+        title="Research & Projects"
+        description="Interests, mentorship, and the technical projects that support a path toward physician-scientist work."
       />
 
       <Section eyebrow="Focus Areas" title="Research Interests">
@@ -37,6 +63,43 @@ export default function Research() {
             takeaways for each.
           </p>
         </Card>
+      </Section>
+
+      <Section id="projects" eyebrow="Applied Work" title="Projects" className="bg-surface">
+        <div className="space-y-10">
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-muted">
+              Python Projects
+            </h3>
+            <div className="mt-4">
+              <ProjectGrid items={PYTHON_PROJECTS} />
+            </div>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-muted">
+              Healthcare Apps
+            </h3>
+            <div className="mt-4">
+              <ProjectGrid items={HEALTHCARE_APPS} />
+            </div>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-muted">
+              Science Fair
+            </h3>
+            <div className="mt-4">
+              <ProjectGrid items={SCIENCE_FAIR} />
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section eyebrow="Skills" title="Coding">
+        <div className="flex flex-wrap gap-2">
+          {["Python", "HTML/CSS", "JavaScript", "SQL", "Data Analysis"].map((s) => (
+            <Tag key={s}>{s}</Tag>
+          ))}
+        </div>
       </Section>
 
       <Section eyebrow="Roadmap" title="Future Projects" className="bg-surface">

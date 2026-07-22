@@ -20,10 +20,8 @@ deployed automatically to **GitHub Pages**.
 │   ├── page.tsx          # Home
 │   ├── about/
 │   ├── academics/
-│   ├── research/
-│   ├── healthcare/
-│   ├── projects/
-│   ├── leadership/
+│   ├── research/         # includes Projects (Python/science fair work)
+│   ├── healthcare/       # includes Leadership & Community Service
 │   ├── blog/
 │   ├── resume/
 │   ├── contact/

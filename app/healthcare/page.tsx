@@ -14,7 +14,7 @@ export default function Healthcare() {
       <PageHero
         eyebrow="Healthcare"
         title="Healthcare Experience"
-        description="Clinical exposure, service, and the milestones of a path toward medicine."
+        description="Clinical exposure, service, and leadership on the path toward medicine."
       />
 
       <Section eyebrow="Service" title="Volunteer Work">
@@ -49,6 +49,25 @@ export default function Healthcare() {
           <p className="text-[15px] leading-relaxed text-muted">
             List healthcare-related certifications &mdash; CPR, First Aid, HIPAA training,
             and any others earned through the Academy.
+          </p>
+        </Card>
+      </Section>
+
+      <Section eyebrow="Roles" title="Leadership & Organizations">
+        <Card>
+          <p className="text-[15px] leading-relaxed text-muted">
+            List leadership positions and club or honor-society involvement &mdash;
+            officer roles, team captaincies, or student government &mdash; along with
+            responsibilities and impact.
+          </p>
+        </Card>
+      </Section>
+
+      <Section eyebrow="Giving Back" title="Community Service" className="bg-surface">
+        <Card>
+          <p className="text-[15px] leading-relaxed text-muted">
+            Describe community service initiatives you have led or participated in,
+            beyond clinical volunteering.
           </p>
         </Card>
       </Section>

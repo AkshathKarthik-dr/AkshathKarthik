@@ -35,14 +35,16 @@ export function Section({
   eyebrow,
   children,
   className = "",
+  id,
 }: {
   title?: string;
   eyebrow?: string;
   children: ReactNode;
   className?: string;
+  id?: string;
 }) {
   return (
-    <section className={`mx-auto max-w-6xl px-5 py-14 ${className}`}>
+    <section id={id} className={`mx-auto max-w-6xl scroll-mt-20 px-5 py-14 ${className}`}>
       {eyebrow && (
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
           {eyebrow}
@@ -71,7 +73,7 @@ export function Card({ children, className = "" }: { children: ReactNode; classN
 export function StatCard({ value, label }: { value: string; label: string }) {
   return (
     <div className="rounded-xl border border-border bg-background px-5 py-6 text-center">
-      <p className="text-2xl font-semibold text-navy dark:text-white">{value}</p>
+      <p className="text-2xl font-semibold text-foreground">{value}</p>
       <p className="mt-1 text-xs uppercase tracking-[0.1em] text-muted">{label}</p>
     </div>
   );

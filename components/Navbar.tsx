@@ -11,8 +11,6 @@ const LINKS = [
   { href: "/academics", label: "Academics" },
   { href: "/research", label: "Research" },
   { href: "/healthcare", label: "Healthcare" },
-  { href: "/projects", label: "Projects" },
-  { href: "/leadership", label: "Leadership" },
   { href: "/blog", label: "Blog" },
   { href: "/resume", label: "Resume" },
   { href: "/contact", label: "Contact" },

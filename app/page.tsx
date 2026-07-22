@@ -78,7 +78,7 @@ export default function Home() {
               <Button href="/research" variant="secondary">
                 Research
               </Button>
-              <Button href="/projects" variant="secondary">
+              <Button href="/research#projects" variant="secondary">
                 Projects
               </Button>
             </div>
@@ -115,7 +115,7 @@ export default function Home() {
           ))}
         </div>
         <div className="mt-8">
-          <Link href="/projects" className="focus-ring text-sm font-semibold text-accent hover:underline">
+          <Link href="/research#projects" className="focus-ring text-sm font-semibold text-accent hover:underline">
             View all projects &rarr;
           </Link>
         </div>

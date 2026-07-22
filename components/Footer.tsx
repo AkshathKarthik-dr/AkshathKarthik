@@ -6,8 +6,6 @@ const LINKS = [
   { href: "/academics", label: "Academics" },
   { href: "/research", label: "Research" },
   { href: "/healthcare", label: "Healthcare" },
-  { href: "/projects", label: "Projects" },
-  { href: "/leadership", label: "Leadership" },
   { href: "/blog", label: "Blog" },
   { href: "/resume", label: "Resume" },
 ];
@@ -33,7 +31,7 @@ export default function Footer() {
             Explore
           </p>
           <ul className="mt-3 space-y-2">
-            {LINKS.slice(0, 4).map((l) => (
+            {LINKS.slice(0, 3).map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="focus-ring text-sm text-muted transition hover:text-accent">
                   {l.label}
@@ -48,7 +46,7 @@ export default function Footer() {
             More
           </p>
           <ul className="mt-3 space-y-2">
-            {LINKS.slice(4).map((l) => (
+            {LINKS.slice(3).map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="focus-ring text-sm text-muted transition hover:text-accent">
                   {l.label}

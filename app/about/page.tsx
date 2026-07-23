@@ -25,10 +25,13 @@ export default function About() {
               aria-hidden="true"
               className="absolute -bottom-5 -right-5 h-full w-full rounded-2xl bg-accent/15"
             />
-            <div className="relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-2xl border border-border bg-surface text-center text-sm text-muted">
-              Portrait photo
-              <br />
-              (add later)
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border bg-surface">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/images/profile.jpg"
+                alt="Akshath Karthik"
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="absolute -bottom-6 -left-6 rounded-xl border border-border bg-background px-5 py-4 shadow-[0_12px_32px_-12px_rgba(11,31,58,0.35)]">
               <p className="text-xs font-semibold uppercase tracking-[0.1em] text-accent">

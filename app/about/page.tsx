@@ -46,7 +46,7 @@ export default function About() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
                 Biography
               </p>
-              <p className="mt-3 font-display text-xl leading-relaxed text-foreground sm:text-2xl">
+              <p className="mt-3 text-base leading-relaxed text-foreground sm:text-[17px]">
                 {bio}
               </p>
             </div>

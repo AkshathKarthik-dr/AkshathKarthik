@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PulseDivider from "./PulseDivider";
+import content from "@/content/site-content.json";
 
 const LINKS = [
   { href: "/about", label: "About" },
@@ -63,7 +64,7 @@ export default function Footer() {
           <ul className="mt-3 space-y-2">
             <li>
               <a
-                href="mailto:AkshathKarthik@proton.me"
+                href={`mailto:${content.contact.email}`}
                 className="focus-ring text-sm text-muted transition hover:text-accent"
               >
                 Email

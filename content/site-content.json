@@ -1,0 +1,130 @@
+{
+  "home": {
+    "roles": ["Healthcare Scholar", "Aspiring Physician\u2013Scientist", "Research Enthusiast"],
+    "missionCard": "Bridging medicine and technology \u2014 using research and software to understand disease more clearly and care for patients more effectively.",
+    "snapshot": [
+      { "value": "2029", "label": "Class of" },
+      { "value": "Academy", "label": "Healthcare" },
+      { "value": "Certified", "label": "Python" },
+      { "value": "Active", "label": "Volunteer" },
+      { "value": "Focused", "label": "Research" },
+      { "value": "Multi", "label": "Languages" }
+    ],
+    "featuredProjects": [
+      {
+        "title": "Clinical Symptom Tracker",
+        "tag": "Healthcare App",
+        "description": "A Python-based tool for logging and visualizing patient-reported symptoms over time, built to explore how software can support clinical decision-making."
+      },
+      {
+        "title": "Alzheimer's Imaging Classifier",
+        "tag": "Research",
+        "description": "An exploratory machine learning project applying image classification techniques to publicly available neuroimaging datasets."
+      },
+      {
+        "title": "Volunteer Hours Dashboard",
+        "tag": "Coding",
+        "description": "A lightweight dashboard for tracking clinical volunteering and shadowing hours, built to practice full-stack development fundamentals."
+      }
+    ],
+    "news": [
+      {
+        "date": "Coming soon",
+        "title": "Research Profile publication",
+        "description": "Formal research interests and faculty mentorship details will be posted here."
+      },
+      {
+        "date": "Coming soon",
+        "title": "First monthly blog article",
+        "description": "Long-form writing on healthcare, medicine, and the research process begins soon."
+      },
+      {
+        "date": "Coming soon",
+        "title": "Science fair results",
+        "description": "Updates on current and upcoming science fair projects will be added as they develop."
+      }
+    ]
+  },
+
+  "about": {
+    "bio": "Akshath Karthik is a Healthcare Academy student, Class of 2029, pursuing a path toward medicine through a combination of coursework, clinical exposure, and independent research. Replace this paragraph with 2\u20133 sentences about your background, interests, and what draws you to healthcare and science.",
+    "mission": "Describe the mission that drives your work \u2014 the intersection of medicine, research, and technology you want to pursue, and who you hope to serve.",
+    "careerVision": "Outline your long-term vision \u2014 physician\u2013scientist, specialty interests, and the kind of impact you hope to have in medicine and research.",
+    "values": [
+      { "title": "Curiosity", "description": "Add a short description of what this value means in your work and life." },
+      { "title": "Integrity", "description": "Add a short description of what this value means in your work and life." },
+      { "title": "Service", "description": "Add a short description of what this value means in your work and life." }
+    ]
+  },
+
+  "academics": {
+    "gpa": "Add GPA",
+    "classRank": "Add Rank",
+    "classOf": "2029",
+    "track": "Academy",
+    "coursework": [
+      "Biology",
+      "Chemistry",
+      "Precalculus / Calculus",
+      "English Language Arts",
+      "World History",
+      "Healthcare Academy Core"
+    ],
+    "apClasses": [
+      { "name": "AP Biology", "note": "Add grade, year, and notes here." },
+      { "name": "AP Chemistry", "note": "Add grade, year, and notes here." },
+      { "name": "AP Calculus", "note": "Add grade, year, and notes here." },
+      { "name": "AP Psychology", "note": "Add grade, year, and notes here." }
+    ],
+    "healthcareAcademyDescription": "Describe the Healthcare Academy program \u2014 its structure, clinical components, and what it has taught you so far about medicine as a career.",
+    "certifications": [
+      "Python Programming Certification",
+      "CPR / First Aid (planned)",
+      "HIPAA Basics (planned)"
+    ],
+    "awards": [
+      { "title": "Add your first award here", "year": "2026" },
+      { "title": "Add another award here", "year": "2026" }
+    ]
+  },
+
+  "research": {
+    "pageDescription": "Interests, mentorship, and the technical projects that support a path toward physician-scientist work.",
+    "interests": ["Neuroscience", "Cardiology", "Medical AI", "Diagnostic Imaging", "Genomics"],
+    "facultyInterests": "List faculty members, labs, or professors whose research aligns with your interests, along with a short note on why their work is compelling to you.",
+    "currentReading": "Add papers, textbooks, and articles you are currently reading, with brief takeaways for each.",
+    "pythonProjects": [
+      { "title": "Clinical Symptom Tracker", "desc": "Python tool for logging and visualizing patient-reported symptoms." },
+      { "title": "Volunteer Hours Dashboard", "desc": "A lightweight dashboard for tracking clinical volunteering and shadowing hours." }
+    ],
+    "healthcareApps": [
+      { "title": "Medication Reminder Concept", "desc": "A concept app for helping patients track medication schedules." }
+    ],
+    "scienceFair": [
+      { "title": "Science Fair Project", "desc": "Add title, hypothesis, methodology, and results here." }
+    ],
+    "codingSkills": ["Python", "HTML/CSS", "JavaScript", "SQL", "Data Analysis"],
+    "futureProjects": [
+      { "title": "Planned Project 1", "desc": "Add a short description and target timeline." },
+      { "title": "Planned Project 2", "desc": "Add a short description and target timeline." }
+    ]
+  },
+
+  "healthcare": {
+    "volunteerWork": "List hospitals, clinics, or organizations where you volunteer, along with your role, hours, and what you learned.",
+    "clinicalExperience": "Describe any hands-on clinical experiences \u2014 skills labs, simulations, or supervised patient interaction through the Healthcare Academy.",
+    "shadowing": "List physicians, specialties, and settings you have shadowed in, with key takeaways from each experience.",
+    "certifications": "List healthcare-related certifications \u2014 CPR, First Aid, HIPAA training, and any others earned through the Academy.",
+    "leadership": "List leadership positions and club or honor-society involvement \u2014 officer roles, team captaincies, or student government \u2014 along with responsibilities and impact.",
+    "communityService": "Describe community service initiatives you have led or participated in, beyond clinical volunteering.",
+    "journey": [
+      { "year": "Freshman Year", "text": "Enrolled in the Healthcare Academy program." },
+      { "year": "Sophomore Year", "text": "Began clinical shadowing and volunteer work." },
+      { "year": "Junior Year", "text": "Expanding clinical exposure and certifications." }
+    ]
+  },
+
+  "contact": {
+    "email": "AkshathKarthik@proton.me"
+  }
+}

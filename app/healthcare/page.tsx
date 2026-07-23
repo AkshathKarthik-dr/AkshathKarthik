@@ -1,12 +1,17 @@
 import { PageHero, Section, Card } from "@/components/UI";
+import content from "@/content/site-content.json";
 
 export const metadata = { title: "Healthcare | Akshath Karthik" };
 
-const JOURNEY = [
-  { year: "Freshman Year", text: "Enrolled in the Healthcare Academy program." },
-  { year: "Sophomore Year", text: "Began clinical shadowing and volunteer work." },
-  { year: "Junior Year", text: "Expanding clinical exposure and certifications." },
-];
+const {
+  volunteerWork,
+  clinicalExperience,
+  shadowing,
+  certifications,
+  leadership,
+  communityService,
+  journey,
+} = content.healthcare;
 
 export default function Healthcare() {
   return (
@@ -19,62 +24,43 @@ export default function Healthcare() {
 
       <Section eyebrow="Service" title="Volunteer Work">
         <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            List hospitals, clinics, or organizations where you volunteer, along with your
-            role, hours, and what you learned.
-          </p>
+          <p className="text-[15px] leading-relaxed text-muted">{volunteerWork}</p>
         </Card>
       </Section>
 
       <Section eyebrow="In Practice" title="Clinical Experience" className="bg-surface">
         <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            Describe any hands-on clinical experiences &mdash; skills labs, simulations,
-            or supervised patient interaction through the Healthcare Academy.
-          </p>
+          <p className="text-[15px] leading-relaxed text-muted">{clinicalExperience}</p>
         </Card>
       </Section>
 
       <Section eyebrow="Observation" title="Shadowing">
         <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            List physicians, specialties, and settings you have shadowed in, with key
-            takeaways from each experience.
-          </p>
+          <p className="text-[15px] leading-relaxed text-muted">{shadowing}</p>
         </Card>
       </Section>
 
       <Section eyebrow="Credentials" title="Certifications" className="bg-surface">
         <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            List healthcare-related certifications &mdash; CPR, First Aid, HIPAA training,
-            and any others earned through the Academy.
-          </p>
+          <p className="text-[15px] leading-relaxed text-muted">{certifications}</p>
         </Card>
       </Section>
 
       <Section eyebrow="Roles" title="Leadership & Organizations">
         <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            List leadership positions and club or honor-society involvement &mdash;
-            officer roles, team captaincies, or student government &mdash; along with
-            responsibilities and impact.
-          </p>
+          <p className="text-[15px] leading-relaxed text-muted">{leadership}</p>
         </Card>
       </Section>
 
       <Section eyebrow="Giving Back" title="Community Service" className="bg-surface">
         <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            Describe community service initiatives you have led or participated in,
-            beyond clinical volunteering.
-          </p>
+          <p className="text-[15px] leading-relaxed text-muted">{communityService}</p>
         </Card>
       </Section>
 
       <Section eyebrow="Timeline" title="Healthcare Journey">
         <div className="space-y-6 border-l-2 border-border pl-6">
-          {JOURNEY.map((j) => (
+          {journey.map((j) => (
             <div key={j.year} className="relative">
               <span className="absolute -left-[31px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" />
               <p className="text-xs font-semibold uppercase tracking-[0.1em] text-accent">

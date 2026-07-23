@@ -1,21 +1,19 @@
 import { PageHero, Section, Card, Tag } from "@/components/UI";
+import content from "@/content/site-content.json";
 
 export const metadata = { title: "Research | Akshath Karthik" };
 
-const INTERESTS = ["Neuroscience", "Cardiology", "Medical AI", "Diagnostic Imaging", "Genomics"];
-
-const PYTHON_PROJECTS = [
-  { title: "Clinical Symptom Tracker", desc: "Python tool for logging and visualizing patient-reported symptoms." },
-  { title: "Volunteer Hours Dashboard", desc: "A lightweight dashboard for tracking clinical volunteering and shadowing hours." },
-];
-
-const HEALTHCARE_APPS = [
-  { title: "Medication Reminder Concept", desc: "A concept app for helping patients track medication schedules." },
-];
-
-const SCIENCE_FAIR = [
-  { title: "Science Fair Project", desc: "Add title, hypothesis, methodology, and results here." },
-];
+const {
+  pageDescription,
+  interests,
+  facultyInterests,
+  currentReading,
+  pythonProjects,
+  healthcareApps,
+  scienceFair,
+  codingSkills,
+  futureProjects,
+} = content.research;
 
 function ProjectGrid({ items }: { items: { title: string; desc: string }[] }) {
   return (
@@ -33,15 +31,11 @@ function ProjectGrid({ items }: { items: { title: string; desc: string }[] }) {
 export default function Research() {
   return (
     <>
-      <PageHero
-        eyebrow="Research"
-        title="Research & Projects"
-        description="Interests, mentorship, and the technical projects that support a path toward physician-scientist work."
-      />
+      <PageHero eyebrow="Research" title="Research & Projects" description={pageDescription} />
 
       <Section eyebrow="Focus Areas" title="Research Interests">
         <div className="flex flex-wrap gap-2">
-          {INTERESTS.map((i) => (
+          {interests.map((i) => (
             <Tag key={i}>{i}</Tag>
           ))}
         </div>
@@ -49,19 +43,13 @@ export default function Research() {
 
       <Section eyebrow="Mentorship" title="Faculty Interests" className="bg-surface">
         <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            List faculty members, labs, or professors whose research aligns with your
-            interests, along with a short note on why their work is compelling to you.
-          </p>
+          <p className="text-[15px] leading-relaxed text-muted">{facultyInterests}</p>
         </Card>
       </Section>
 
       <Section eyebrow="Reading" title="Current Reading">
         <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            Add papers, textbooks, and articles you are currently reading, with brief
-            takeaways for each.
-          </p>
+          <p className="text-[15px] leading-relaxed text-muted">{currentReading}</p>
         </Card>
       </Section>
 
@@ -72,7 +60,7 @@ export default function Research() {
               Python Projects
             </h3>
             <div className="mt-4">
-              <ProjectGrid items={PYTHON_PROJECTS} />
+              <ProjectGrid items={pythonProjects} />
             </div>
           </div>
           <div>
@@ -80,7 +68,7 @@ export default function Research() {
               Healthcare Apps
             </h3>
             <div className="mt-4">
-              <ProjectGrid items={HEALTHCARE_APPS} />
+              <ProjectGrid items={healthcareApps} />
             </div>
           </div>
           <div>
@@ -88,7 +76,7 @@ export default function Research() {
               Science Fair
             </h3>
             <div className="mt-4">
-              <ProjectGrid items={SCIENCE_FAIR} />
+              <ProjectGrid items={scienceFair} />
             </div>
           </div>
         </div>
@@ -96,7 +84,7 @@ export default function Research() {
 
       <Section eyebrow="Skills" title="Coding">
         <div className="flex flex-wrap gap-2">
-          {["Python", "HTML/CSS", "JavaScript", "SQL", "Data Analysis"].map((s) => (
+          {codingSkills.map((s) => (
             <Tag key={s}>{s}</Tag>
           ))}
         </div>
@@ -104,14 +92,12 @@ export default function Research() {
 
       <Section eyebrow="Roadmap" title="Future Projects" className="bg-surface">
         <div className="grid gap-4 sm:grid-cols-2">
-          <Card>
-            <h3 className="text-base font-semibold text-foreground">Planned Project 1</h3>
-            <p className="mt-2 text-sm text-muted">Add a short description and target timeline.</p>
-          </Card>
-          <Card>
-            <h3 className="text-base font-semibold text-foreground">Planned Project 2</h3>
-            <p className="mt-2 text-sm text-muted">Add a short description and target timeline.</p>
-          </Card>
+          {futureProjects.map((p) => (
+            <Card key={p.title}>
+              <h3 className="text-base font-semibold text-foreground">{p.title}</h3>
+              <p className="mt-2 text-sm text-muted">{p.desc}</p>
+            </Card>
+          ))}
         </div>
       </Section>
 

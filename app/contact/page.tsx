@@ -1,6 +1,9 @@
 import { PageHero, Section, Card, Button } from "@/components/UI";
+import content from "@/content/site-content.json";
 
 export const metadata = { title: "Contact | Akshath Karthik" };
+
+const { email } = content.contact;
 
 export default function Contact() {
   return (
@@ -18,7 +21,7 @@ export default function Contact() {
             The best way to reach me directly.
           </p>
           <div className="mt-4">
-            <Button href="mailto:AkshathKarthik@proton.me">Send an Email</Button>
+            <Button href={`mailto:${email}`}>Send an Email</Button>
           </div>
         </Card>
       </Section>

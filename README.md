@@ -72,6 +72,45 @@ This generates a fully static site in the `out/` folder (via `output: "export"` 
    the **Actions** tab.
 4. Your site will be live at `https://akshathkarthik.github.io/`.
 
+## Editing site content (no coding needed)
+
+Almost every piece of text on the site \u2014 bio, GPA, coursework, research interests,
+volunteer work, awards, project descriptions, the home page snapshot, even the contact
+email \u2014 lives in **one file**: `content/site-content.json`.
+
+To update anything: open that file, find the field, and edit the text between the
+quotes. Save, commit, push \u2014 nothing else needs to change. You never need to touch a
+`.tsx` file for ordinary content updates.
+
+**How the file is organized** (matches the site's pages):
+
+| Section in the file | Shows up on |
+|---|---|
+| `home` | Home page \u2014 role tags in the hero, mission blurb, academic snapshot stats, featured projects, latest news |
+| `about` | About page \u2014 biography, mission, career vision, values |
+| `academics` | Academics page \u2014 GPA, class rank, coursework, AP classes, program description, certifications, awards |
+| `research` | Research page \u2014 interests, faculty interests, current reading, Python/healthcare-app/science-fair projects, coding skills, future projects |
+| `healthcare` | Healthcare page \u2014 volunteer work, clinical experience, shadowing, certifications, leadership, community service, journey timeline |
+| `contact` | Contact page and footer \u2014 your email address |
+
+**Adding or removing list items** (awards, projects, coursework tags, values, etc.):
+these are all written as a list in `[ ]` brackets. Copy one existing entry inside the
+brackets (including its `{ }` if it's an object), edit the text, and add or remove a
+comma-separated entry. For example, to add a fourth value on the About page:
+```json
+"values": [
+  { "title": "Curiosity", "description": "..." },
+  { "title": "Integrity", "description": "..." },
+  { "title": "Service", "description": "..." },
+  { "title": "Resilience", "description": "Add your description here." }
+]
+```
+
+**One formatting rule to watch for**: JSON requires a comma after every item except the
+last one in a list, and no trailing comma after the very last item. If the site fails
+to build after an edit, this is the most common cause \u2014 check the Actions tab for the
+error, or paste the file back to me and I'll spot it.
+
 ## Adding a blog post (no JSX/coding needed)
 
 Blog posts live as plain Markdown files in `content/blog/`. To publish a new one:
@@ -99,37 +138,17 @@ Blog posts live as plain Markdown files in `content/blog/`. To publish a new one
 The five starter posts already in `content/blog/` (AI in healthcare, cardiology, etc.)
 are set to `draft: true` — write the content and flip that flag when each is ready.
 
-## Adding an award (or similar list item)
+## Photo, resume, and PDFs (not text — handled separately)
 
-Several pages — Academics (Awards), Academics (Coursework, AP Classes, Certifications),
-Projects (skills), Research (interests) — are driven by a plain list near the top of
-their file, so adding an item means editing one line, not writing new layout code.
-
-Example — `app/academics/page.tsx`:
-```ts
-const AWARDS = [
-  { title: "Add your first award here", year: "2026" },
-  { title: "Add another award here", year: "2026" },
-];
-```
-To add an award, copy one line inside the brackets, edit the text and year, save,
-commit, push. The page automatically renders a new card for it — no other changes
-needed. The same pattern (a `const SOMETHING = [...]` array near the top of the file)
-is used for coursework, AP classes, certifications, project lists, and tags throughout
-the site.
-
-## Adding your content
+The content JSON above covers all text. A few things live as files instead:
 
 - **Photo**: drop an image in `public/assets/images/` and reference it on the About page
   (`app/about/page.tsx`), replacing the placeholder box.
 - **Resume / Research Profile**: replace the placeholder files in `public/assets/docs/`
   with your real `Resume.pdf` and `ResearchProfile.pdf` — the Resume page already links
   to `/assets/docs/Resume.pdf` and `/assets/docs/ResearchProfile.pdf`.
-- **Text content**: every page currently has clearly-marked placeholder copy — just
-  search each `app/*/page.tsx` file and replace the placeholder paragraphs with your own
-  writing.
-- **Email**: already set to `AkshathKarthik@proton.me` in `app/contact/page.tsx` and
-  `components/Footer.tsx` — update both places if it ever changes.
+- **Email**: set in `content/site-content.json` under `contact.email` — used by both the
+  Contact page and the footer automatically.
 
 ## Design system
 

@@ -74,28 +74,29 @@ This generates a fully static site in the `out/` folder (via `output: "export"` 
 
 ## Editing site content (no coding needed)
 
-Almost every piece of text on the site \u2014 bio, GPA, coursework, research interests,
+Almost every piece of text on the site — bio, GPA, coursework, research interests,
 volunteer work, awards, project descriptions, the home page snapshot, even the contact
-email \u2014 lives in **one file**: `content/site-content.json`.
+email — lives in **one file**: `content/site-content.json`.
 
 To update anything: open that file, find the field, and edit the text between the
-quotes. Save, commit, push \u2014 nothing else needs to change. You never need to touch a
+quotes. Save, commit, push — nothing else needs to change. You never need to touch a
 `.tsx` file for ordinary content updates.
 
 **How the file is organized** (matches the site's pages):
 
 | Section in the file | Shows up on |
 |---|---|
-| `home` | Home page \u2014 role tags in the hero, mission blurb, academic snapshot stats, Milestones timeline, optional featured projects, optional news |
-| `about` | About page \u2014 biography, mission, career vision, values |
-| `academics` | Academics page \u2014 GPA, class rank, honors, coursework, AP classes, program description, certifications, awards |
-| `research` | Research page \u2014 status note, interests, faculty interests, current reading, projects (web/Python/healthcare-app/science-fair), coding skills, future projects |
-| `healthcare` | Healthcare page \u2014 volunteer work, clinical experience, shadowing, certifications, leadership, community service, journey timeline |
-| `contact` | Contact page and footer \u2014 your email address |
+| `home` | Home page — role tags in the hero, mission blurb, academic snapshot stats, Milestones timeline, optional featured projects, optional news |
+| `about` | About page — biography, mission, career vision, values |
+| `languages` | Home page — the Languages section (intro + list of languages/proficiency) |
+| `academics` | Academics page — GPA, class rank, honors, coursework, AP classes, program description, certifications, awards |
+| `research` | Research page — status note, interests, faculty interests, current reading, projects (web/Python/healthcare-app/science-fair), coding skills, future projects |
+| `healthcare` | Healthcare page — volunteer work, clinical experience, shadowing, certifications, leadership, community service, journey timeline |
+| `contact` | Contact page and footer — your email address |
 
 **Empty lists hide themselves.** `home.featuredProjects`, `home.news`, and every list under
 `research` (Python projects, web projects, healthcare apps, science fair, future
-projects) will simply not render a section if left as `[]` \u2014 so it's safe to leave
+projects) will simply not render a section if left as `[]` — so it's safe to leave
 things empty until you have real content, instead of showing "add something here"
 placeholder text to visitors.
 
@@ -114,7 +115,7 @@ comma-separated entry. For example, to add a fourth value on the About page:
 
 **One formatting rule to watch for**: JSON requires a comma after every item except the
 last one in a list, and no trailing comma after the very last item. If the site fails
-to build after an edit, this is the most common cause \u2014 check the Actions tab for the
+to build after an edit, this is the most common cause — check the Actions tab for the
 error, or paste the file back to me and I'll spot it.
 
 ## Adding a blog post (no JSX/coding needed)

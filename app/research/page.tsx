@@ -75,13 +75,15 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section eyebrow="Mentorship" title="Faculty Interests">
-        <Card>
-          <p className="text-[15px] leading-relaxed text-muted">{facultyInterests}</p>
-        </Card>
-      </Section>
+      {facultyInterests && (
+        <Section eyebrow="Mentorship" title="Faculty Interests">
+          <Card>
+            <p className="text-[15px] leading-relaxed text-muted">{facultyInterests}</p>
+          </Card>
+        </Section>
+      )}
 
-      <Section eyebrow="Reading" title="Current Reading" className="bg-surface">
+      <Section eyebrow="Reading" title="Current Reading" className={facultyInterests ? "bg-surface" : ""}>
         <Card>
           <p className="text-[15px] leading-relaxed text-muted">{currentReading}</p>
         </Card>

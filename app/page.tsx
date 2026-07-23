@@ -7,6 +7,7 @@ import type { SiteContent } from "@/content/types";
 const content = rawContent as SiteContent;
 
 const { roles, missionCard, snapshot, milestones, featuredProjects, news } = content.home;
+const { intro: languagesIntro, list: languages } = content.languages;
 
 export default function Home() {
   return (
@@ -73,8 +74,33 @@ export default function Home() {
         <Timeline items={milestones} />
       </Section>
 
+      <Section eyebrow="Multilingual" title="Languages">
+        <p className="max-w-2xl text-[15px] leading-relaxed text-muted">{languagesIntro}</p>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {languages.map((lang) => (
+            <div
+              key={lang.name}
+              className={`relative rounded-xl border p-5 ${
+                lang.highlight
+                  ? "border-accent bg-accent/5 ring-1 ring-accent/30"
+                  : "border-border bg-background"
+              }`}
+            >
+              {lang.highlight && (
+                <span className="absolute -top-3 left-4 rounded-full bg-accent px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
+                  Signature Strength
+                </span>
+              )}
+              <p className="font-display text-base font-semibold text-foreground">{lang.name}</p>
+              <p className="mt-1.5 text-sm font-medium text-accent">{lang.level}</p>
+              {lang.note && <p className="mt-1.5 text-xs leading-relaxed text-muted">{lang.note}</p>}
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {featuredProjects.length > 0 && (
-        <Section eyebrow="Selected Work" title="Featured Projects">
+        <Section eyebrow="Selected Work" title="Featured Projects" className="bg-surface">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((p) => (
               <Card key={p.title}>
@@ -93,7 +119,7 @@ export default function Home() {
       )}
 
       {news.length > 0 && (
-        <Section eyebrow="Updates" title="Latest News" className={featuredProjects.length > 0 ? "bg-surface" : ""}>
+        <Section eyebrow="Updates" title="Latest News" className={featuredProjects.length === 0 ? "bg-surface" : ""}>
           <div className="grid gap-5 sm:grid-cols-3">
             {news.map((n) => (
               <div key={n.title} className="border-l-2 border-accent/40 pl-5">

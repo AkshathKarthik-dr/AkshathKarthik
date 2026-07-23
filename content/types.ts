@@ -2,6 +2,7 @@ export type ProjectItem = { title: string; desc: string };
 export type FeaturedProject = { title: string; tag: string; description: string };
 export type NewsItem = { date: string; title: string; description: string };
 export type MilestoneItem = { year: string; title: string; description?: string };
+export type LanguageItem = { name: string; level: string; note?: string; highlight?: boolean };
 
 export type SiteContent = {
   home: {
@@ -18,9 +19,11 @@ export type SiteContent = {
     careerVision: string;
     values: { title: string; description: string }[];
   };
+  languages: {
+    intro: string;
+    list: LanguageItem[];
+  };
   academics: {
-    gpa?: string;
-    classRank?: string;
     classOf: string;
     track: string;
     honors: { title: string; note?: string }[];

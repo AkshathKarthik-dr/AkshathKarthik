@@ -7,8 +7,6 @@ const content = rawContent as SiteContent;
 export const metadata = { title: "Academics | Akshath Karthik" };
 
 const {
-  gpa,
-  classRank,
   classOf,
   track,
   honors,
@@ -29,9 +27,7 @@ export default function Academics() {
       />
 
       <Section eyebrow="Standing" title="At a Glance">
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {gpa && <StatCard value={gpa} label="GPA" />}
-          {classRank && <StatCard value={classRank} label="Class Rank" />}
+        <div className="grid grid-cols-2 gap-4 sm:max-w-sm">
           <StatCard value={classOf} label="Class of" />
           <StatCard value={track} label="Healthcare Track" />
         </div>

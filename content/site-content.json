@@ -8,7 +8,7 @@
       { "value": "1270", "label": "PSAT/NMSQT" },
       { "value": "HOSA", "label": "Member" },
       { "value": "Active", "label": "Volunteer" },
-      { "value": "Neuro", "label": "Focus" }
+      { "value": "4", "label": "Languages" }
     ],
     "milestones": [
       {
@@ -52,6 +52,16 @@
     ]
   },
 
+  "languages": {
+    "intro": "Fluent in English and Tamil, with growing proficiency in Spanish and American Sign Language \u2014 including the ability to communicate directly with Deaf and hard-of-hearing patients, a skill with real relevance to accessible, equitable patient care.",
+    "list": [
+      { "name": "English", "level": "Native" },
+      { "name": "Tamil", "level": "Native" },
+      { "name": "Spanish", "level": "Spanish 3 Honors", "note": "Completing Spanish 4 Honors in 2027" },
+      { "name": "American Sign Language", "level": "ASL 3 Honors", "note": "Completing ASL 4 Honors in 2027", "highlight": true }
+    ]
+  },
+
   "academics": {
     "classOf": "2029",
     "track": "Academy",
@@ -61,20 +71,22 @@
     "coursework": [
       "Biology",
       "Chemistry",
-      "Precalculus ",
+      "Precalculus",
       "English Language Arts",
       "World History",
-      "Healthcare Academy Core"
+      "Healthcare Academy Core",
+      "Spanish 3 Honors",
+      "ASL 3 Honors"
     ],
     "apClasses": [
       { "name": "AP Human Geography", "note": "Freshman." },
       { "name": "AP Chemistry", "note": "Sophomore." },
       { "name": "AP PreCalculus", "note": "Sophomore." },
-      { "name": "AP Statistic", "note": "Sophomore." },
+      { "name": "AP Statistics", "note": "Sophomore." },
       { "name": "AP Capstone Seminar", "note": "Sophomore." },
       { "name": "AP World History - Modern", "note": "Sophomore." }
     ],
-    "healthcareAcademyDescription": "The UF Health Future Healthcare Professionals Academy at Tocoi Creek High School provides foundational training in human anatomy, physiology, and health science principles. Through hands-on coursework and partnership with UF Health, the program offers early exposure to clinical environments, medical terminology, and patient care fundamentals—building the essential foundation for my long-term goal of becoming a neurosurgeon.",
+    "healthcareAcademyDescription": "The UF Health Future Healthcare Professionals Academy at Tocoi Creek High School provides foundational training in human anatomy, physiology, and health science principles. Through hands-on coursework and partnership with UF Health, the program offers early exposure to clinical environments, medical terminology, and patient care fundamentals \u2014 building the essential foundation for my long-term goal of becoming a neurosurgeon.",
     "certifications": [
       "Python Programming Certification",
       "CPR / First Aid (planned)",

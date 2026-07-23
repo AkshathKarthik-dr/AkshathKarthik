@@ -23,10 +23,10 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-12 pt-4 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-border">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/assets/icons/logo-light.png" alt="" className="h-7 w-7 object-contain" />
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/icons/logo-light.png" alt="" className="block h-14 w-auto shrink-0 dark:hidden" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/icons/logo-dark.png" alt="" className="hidden h-14 w-auto shrink-0 dark:block" />
             <p className="text-sm font-semibold tracking-[0.12em] text-foreground">
               AKSHATH KARTHIK
             </p>

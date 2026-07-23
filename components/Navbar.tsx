@@ -28,14 +28,18 @@ export default function Navbar() {
           className="focus-ring flex shrink-0 items-center gap-3 text-[15px] font-semibold tracking-[0.14em] text-foreground"
           onClick={() => setOpen(false)}
         >
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-border">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/assets/icons/logo-light.png"
-              alt=""
-              className="h-9 w-9 object-contain"
-            />
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/icons/logo-light.png"
+            alt=""
+            className="block h-24 w-auto shrink-0 dark:hidden"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/icons/logo-dark.png"
+            alt=""
+            className="hidden h-24 w-auto shrink-0 dark:block"
+          />
           AKSHATH&nbsp;KARTHIK
         </Link>
 

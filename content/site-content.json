@@ -67,12 +67,12 @@
       "Healthcare Academy Core"
     ],
     "apClasses": [
-      { "name": "AP Human Geography", "note": "Add grade, year, and notes here." },
-      { "name": "AP Chemistry", "note": "Add grade, year, and notes here." },
-      { "name": "AP PreCalculus", "note": "Add grade, year, and notes here." },
-      { "name": "AP Statistic", "note": "Add grade, year, and notes here." },
-      { "name": "AP Capstone Seminar", "note": "Add grade, year, and notes here." },
-      { "name": "AP World History - Modern", "note": "Add grade, year, and notes here." }
+      { "name": "AP Human Geography", "note": "Freshman." },
+      { "name": "AP Chemistry", "note": "Sophomore." },
+      { "name": "AP PreCalculus", "note": "Sophomore." },
+      { "name": "AP Statistic", "note": "Sophomore." },
+      { "name": "AP Capstone Seminar", "note": "Sophomore." },
+      { "name": "AP World History - Modern", "note": "Sophomore." }
     ],
     "healthcareAcademyDescription": "The UF Health Future Healthcare Professionals Academy at Tocoi Creek High School provides foundational training in human anatomy, physiology, and health science principles. Through hands-on coursework and partnership with UF Health, the program offers early exposure to clinical environments, medical terminology, and patient care fundamentals—building the essential foundation for my long-term goal of becoming a neurosurgeon.",
     "certifications": [

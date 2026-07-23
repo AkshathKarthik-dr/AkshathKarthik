@@ -11,7 +11,6 @@ const {
   comingSoonNote,
   interests,
   facultyInterests,
-  currentReading,
   pythonProjects,
   webProjects,
   healthcareApps,
@@ -82,12 +81,6 @@ export default function Research() {
           </Card>
         </Section>
       )}
-
-      <Section eyebrow="Reading" title="Current Reading" className={facultyInterests ? "bg-surface" : ""}>
-        <Card>
-          <p className="text-[15px] leading-relaxed text-muted">{currentReading}</p>
-        </Card>
-      </Section>
 
       <Section id="projects" eyebrow="Applied Work" title="Projects">
         {hasAnyProjects ? (

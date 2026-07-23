@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PulseDivider from "@/components/PulseDivider";
+import SynapseField from "@/components/SynapseField";
 import { Section, Card, StatCard, Button, Tag, Timeline } from "@/components/UI";
 import rawContent from "@/content/site-content.json";
 import type { SiteContent } from "@/content/types";
@@ -11,13 +12,14 @@ const { roles, missionCard, snapshot, milestones, featuredProjects, news } = con
 export default function Home() {
   return (
     <>
-      <section className="border-b border-border bg-surface">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:py-28 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+      <section className="relative overflow-hidden border-b border-border bg-surface">
+        <SynapseField className="pointer-events-none absolute right-0 top-0 h-full w-full max-w-xl opacity-70" />
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:py-28 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="reveal">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">
               Portfolio
             </p>
-            <h1 className="mt-4 text-5xl font-semibold leading-[1.05] text-foreground sm:text-6xl">
+            <h1 className="mt-4 font-display text-5xl font-semibold leading-[1.05] text-foreground sm:text-6xl">
               Akshath Karthik
             </h1>
             <ul className="mt-6 flex flex-wrap gap-x-3 gap-y-2 text-[15px] font-medium text-muted">

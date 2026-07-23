@@ -1,6 +1,5 @@
 import Link from "next/link";
 import PulseDivider from "@/components/PulseDivider";
-import SynapseField from "@/components/SynapseField";
 import { Section, Card, StatCard, Button, Tag, Timeline } from "@/components/UI";
 import rawContent from "@/content/site-content.json";
 import type { SiteContent } from "@/content/types";
@@ -13,7 +12,18 @@ export default function Home() {
   return (
     <>
       <section className="relative overflow-hidden border-b border-border bg-surface">
-        <SynapseField className="pointer-events-none absolute right-0 top-0 h-full w-full max-w-xl opacity-70" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/assets/icons/logo-light.png"
+          alt=""
+          className="pointer-events-none absolute -right-10 -top-10 h-[420px] w-[420px] opacity-[0.08] dark:hidden"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/assets/icons/logo-dark.png"
+          alt=""
+          className="pointer-events-none absolute -right-10 -top-10 hidden h-[420px] w-[420px] opacity-[0.12] dark:block"
+        />
         <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:py-28 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="reveal">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-accent">

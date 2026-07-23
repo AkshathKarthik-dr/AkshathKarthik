@@ -22,9 +22,15 @@ export default function Footer() {
       </div>
       <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-12 pt-4 sm:grid-cols-2 md:grid-cols-4">
         <div>
-          <p className="text-sm font-semibold tracking-[0.12em] text-foreground">
-            AKSHATH KARTHIK
-          </p>
+          <div className="flex items-center gap-2.5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/icons/logo-light.png" alt="" className="block h-6 w-6 dark:hidden" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/icons/logo-dark.png" alt="" className="hidden h-6 w-6 dark:block" />
+            <p className="text-sm font-semibold tracking-[0.12em] text-foreground">
+              AKSHATH KARTHIK
+            </p>
+          </div>
           <p className="mt-3 max-w-[220px] text-sm leading-relaxed text-muted">
             Healthcare scholar and aspiring physician&ndash;scientist, Class of 2029.
           </p>

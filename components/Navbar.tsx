@@ -25,9 +25,21 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between gap-8 px-5 py-4">
         <Link
           href="/"
-          className="focus-ring shrink-0 text-[15px] font-semibold tracking-[0.14em] text-foreground"
+          className="focus-ring flex shrink-0 items-center gap-2.5 text-[15px] font-semibold tracking-[0.14em] text-foreground"
           onClick={() => setOpen(false)}
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/icons/logo-light.png"
+            alt=""
+            className="block h-8 w-8 dark:hidden"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/icons/logo-dark.png"
+            alt=""
+            className="hidden h-8 w-8 dark:block"
+          />
           AKSHATH&nbsp;KARTHIK
         </Link>
 

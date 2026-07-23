@@ -9,7 +9,23 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug);
-  return { title: post ? `${post.title} | Akshath Karthik` : "Blog | Akshath Karthik" };
+  if (!post) return { title: "Blog | Akshath Karthik" };
+  const title = `${post.title} | Akshath Karthik`;
+  return {
+    title,
+    description: post.excerpt,
+    openGraph: {
+      title,
+      description: post.excerpt,
+      type: "article",
+      publishedTime: post.date,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description: post.excerpt,
+    },
+  };
 }
 
 function formatDate(dateStr: string) {

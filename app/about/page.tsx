@@ -1,3 +1,4 @@
+import { Guitar, Drum, ChessKnight, Waves } from "lucide-react";
 import { PageHero, Section, Card } from "@/components/UI";
 import rawContent from "@/content/site-content.json";
 import type { SiteContent } from "@/content/types";
@@ -7,6 +8,14 @@ const content = rawContent as SiteContent;
 export const metadata = { title: "About | Akshath Karthik" };
 
 const { bio, mission, careerVision, values } = content.about;
+const { intro: hobbiesIntro, list: hobbies } = content.hobbies;
+
+const HOBBY_ICONS: Record<string, typeof Guitar> = {
+  guitar: Guitar,
+  drum: Drum,
+  chess: ChessKnight,
+  waves: Waves,
+};
 
 export default function About() {
   return (
@@ -79,6 +88,26 @@ export default function About() {
               <p className="mt-2 text-sm leading-relaxed text-muted">{v.description}</p>
             </Card>
           ))}
+        </div>
+      </Section>
+
+      <Section eyebrow="Outside the Classroom" title="Hobbies">
+        <p className="max-w-2xl text-[15px] leading-relaxed text-muted">{hobbiesIntro}</p>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {hobbies.map((hobby) => {
+            const Icon = HOBBY_ICONS[hobby.icon] ?? Guitar;
+            return (
+              <Card key={hobby.name} className="flex flex-col items-start gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10">
+                  <Icon className="h-5 w-5 text-accent" strokeWidth={1.75} aria-hidden="true" />
+                </span>
+                <div>
+                  <p className="font-display text-base font-semibold text-foreground">{hobby.name}</p>
+                  {hobby.note && <p className="mt-1 text-xs leading-relaxed text-muted">{hobby.note}</p>}
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </Section>
     </>

@@ -1,14 +1,36 @@
 {
   "home": {
-    "roles": ["Healthcare Scholar", "Aspiring Neurosurgeon", "Research Enthusiast"],
-    "missionCard": "To understand the brain and nervous system deeply enough to repair it \u2014 pairing scientific rigor with surgical discipline to give patients back function, independence, and time.",
+    "roles": [
+      "Healthcare Scholar",
+      "Aspiring Neurosurgeon",
+      "Research Enthusiast"
+    ],
+    "missionCard": "To understand the brain and nervous system deeply enough to repair it — pairing scientific rigor and surgical precision with the ability to communicate directly with every patient, including those who are Deaf or hard of hearing, through American Sign Language, so no one is left out of their own care.",
     "snapshot": [
-      { "value": "2029", "label": "Class of" },
-      { "value": "Academy", "label": "Healthcare" },
-      { "value": "1270", "label": "PSAT/NMSQT" },
-      { "value": "HOSA", "label": "Member" },
-      { "value": "Active", "label": "Volunteer" },
-      { "value": "4", "label": "Languages" }
+      {
+        "value": "2029",
+        "label": "Class of"
+      },
+      {
+        "value": "Academy",
+        "label": "Healthcare"
+      },
+      {
+        "value": "1270",
+        "label": "PSAT/NMSQT"
+      },
+      {
+        "value": "HOSA",
+        "label": "Member"
+      },
+      {
+        "value": "Active",
+        "label": "Volunteer"
+      },
+      {
+        "value": "4",
+        "label": "Languages"
+      }
     ],
     "milestones": [
       {
@@ -24,11 +46,11 @@
       {
         "year": "2026",
         "title": "Joined HOSA",
-        "description": "Active member of HOSA \u2014 Future Health Professionals, participating in health-science competitive events and community initiatives."
+        "description": "Active member of HOSA — Future Health Professionals, participating in health-science competitive events and community initiatives."
       },
       {
         "year": "9th Grade",
-        "title": "PSAT/NMSQT \u2014 1270",
+        "title": "PSAT/NMSQT — 1270",
         "description": "Scored 1270 on the PSAT/NMSQT as a freshman."
       },
       {
@@ -40,33 +62,60 @@
     "featuredProjects": [],
     "news": []
   },
-
   "about": {
-    "bio": "Akshath Karthik is a Healthcare Academy student, Class of 2029, working toward a career in medicine with a focus on neurology and neurosurgery. He is an active member of HOSA \u2014 Future Health Professionals and volunteers in clinical rehabilitation at Brook Rehab, pairing classroom coursework with direct exposure to patient care.",
-    "mission": "To understand the brain and nervous system deeply enough to repair it \u2014 combining scientific rigor with the discipline of surgery to give patients back function, independence, and time.",
-    "careerVision": "To become a neurosurgeon \u2014 building the academic and clinical foundation now through the Healthcare Academy, HOSA, and hands-on volunteering, with the long-term goal of treating patients with neurological conditions and eventually contributing to research on neural repair and recovery.",
+    "bio": "Akshath Karthik is a Healthcare Academy student, Class of 2029, working toward a career in medicine with a focus on neurology and neurosurgery. He is an active member of HOSA — Future Health Professionals and volunteers in clinical rehabilitation at Brook Rehab, pairing classroom coursework with direct exposure to patient care.",
+    "mission": "To understand the brain and nervous system deeply enough to repair it — pairing scientific rigor and surgical precision with the ability to communicate directly with every patient, including those who are Deaf or hard of hearing, through American Sign Language, so no one is left out of their own care.",
+    "careerVision": "To become a neurosurgeon — building the academic and clinical foundation now through the Healthcare Academy, HOSA, and hands-on volunteering, with the long-term goal of treating patients with neurological conditions and eventually contributing to research on neural repair and recovery.",
     "values": [
-      { "title": "Curiosity", "description": "Approaching the nervous system \u2014 and every patient \u2014 as a problem worth understanding deeply, not just treating." },
-      { "title": "Precision", "description": "The discipline that surgery demands: careful preparation, attention to detail, and no shortcuts." },
-      { "title": "Compassion", "description": "Remembering that behind every diagnosis is a person, learned firsthand through volunteering in clinical rehabilitation." }
+      {
+        "title": "Curiosity",
+        "description": "Approaching the nervous system — and every patient — as a problem worth understanding deeply, not just treating."
+      },
+      {
+        "title": "Precision",
+        "description": "The discipline that surgery demands: careful preparation, attention to detail, and no shortcuts."
+      },
+      {
+        "title": "Compassion",
+        "description": "Remembering that behind every diagnosis is a person, learned firsthand through volunteering in clinical rehabilitation."
+      }
     ]
   },
-
   "languages": {
-    "intro": "Fluent in English and Tamil, with growing proficiency in Spanish and American Sign Language \u2014 including the ability to communicate directly with Deaf and hard-of-hearing patients, a skill with real relevance to accessible, equitable patient care.",
+    "intro": "Fluent in English and Tamil, with growing proficiency in Spanish and American Sign Language — including the ability to communicate directly with Deaf and hard-of-hearing patients, a skill with real relevance to accessible, equitable patient care.",
     "list": [
-      { "name": "English", "level": "Native" },
-      { "name": "Tamil", "level": "Native" },
-      { "name": "Spanish", "level": "Spanish 3 Honors", "note": "Completing Spanish 4 Honors in 2027" },
-      { "name": "American Sign Language", "level": "ASL 3 Honors", "note": "Completing ASL 4 Honors in 2027", "highlight": true }
+      {
+        "name": "English",
+        "level": "Native",
+        "clinicalApplication": "Core communication"
+      },
+      {
+        "name": "Tamil",
+        "level": "Native",
+        "clinicalApplication": "Heritage fluency"
+      },
+      {
+        "name": "Spanish",
+        "level": "Spanish 3 Honors",
+        "clinicalApplication": "Conversational patient care"
+      },
+      {
+        "name": "American Sign Language",
+        "level": "ASL 3 Honors",
+        "clinicalApplication": "Accessible & equitable patient communication",
+        "highlight": true,
+        "featured": true
+      }
     ]
   },
-
   "academics": {
     "classOf": "2029",
     "track": "Academy",
     "honors": [
-      { "title": "1270 on the PSAT/NMSQT", "note": "Scored as a 9th grader." }
+      {
+        "title": "1270 on the PSAT/NMSQT",
+        "note": "Scored as a 9th grader."
+      }
     ],
     "coursework": [
       "Biology",
@@ -79,28 +128,54 @@
       "ASL 3 Honors"
     ],
     "apClasses": [
-      { "name": "AP Human Geography", "note": "Freshman." },
-      { "name": "AP Chemistry", "note": "Sophomore." },
-      { "name": "AP PreCalculus", "note": "Sophomore." },
-      { "name": "AP Statistics", "note": "Sophomore." },
-      { "name": "AP Capstone Seminar", "note": "Sophomore." },
-      { "name": "AP World History - Modern", "note": "Sophomore." }
+      {
+        "name": "AP Human Geography",
+        "note": "Freshman."
+      },
+      {
+        "name": "AP Chemistry",
+        "note": "Sophomore."
+      },
+      {
+        "name": "AP PreCalculus",
+        "note": "Sophomore."
+      },
+      {
+        "name": "AP Statistics",
+        "note": "Sophomore."
+      },
+      {
+        "name": "AP Capstone Seminar",
+        "note": "Sophomore."
+      },
+      {
+        "name": "AP World History - Modern",
+        "note": "Sophomore."
+      }
     ],
-    "healthcareAcademyDescription": "The UF Health Future Healthcare Professionals Academy at Tocoi Creek High School provides foundational training in human anatomy, physiology, and health science principles. Through hands-on coursework and partnership with UF Health, the program offers early exposure to clinical environments, medical terminology, and patient care fundamentals \u2014 building the essential foundation for my long-term goal of becoming a neurosurgeon.",
+    "healthcareAcademyDescription": "The UF Health Future Healthcare Professionals Academy at Tocoi Creek High School provides foundational training in human anatomy, physiology, and health science principles. Through hands-on coursework and partnership with UF Health, the program offers early exposure to clinical environments, medical terminology, and patient care fundamentals — building the essential foundation for my long-term goal of becoming a neurosurgeon.",
     "certifications": [
       "Python Programming Certification",
       "CPR / First Aid (planned)",
       "HIPAA Basics (planned)"
     ],
     "awards": [
-      { "title": "Presidential Award for Educational Excellence", "year": "Elementary School Graduation" }
+      {
+        "title": "Presidential Award for Educational Excellence",
+        "year": "Elementary School Graduation"
+      }
     ]
   },
-
   "research": {
     "pageDescription": "Interests, mentorship, and the technical projects that support a path toward neurosurgery.",
-    "comingSoonNote": "No formal research yet \u2014 this section will be filled in as projects and mentorships begin. Interests below reflect what draws Akshath toward neurology and neurosurgery.",
-    "interests": ["Neuroscience", "Neurosurgery", "Neuroimaging", "Traumatic Brain Injury", "Functional Neurosurgery"],
+    "comingSoonNote": "No formal research yet — this section will be filled in as projects and mentorships begin. Interests below reflect what draws Akshath toward neurology and neurosurgery.",
+    "interests": [
+      "Neuroscience",
+      "Neurosurgery",
+      "Neuroimaging",
+      "Traumatic Brain Injury",
+      "Functional Neurosurgery"
+    ],
     "facultyInterests": "",
     "currentReading": "Gene expression differences in bipolar disorder revealed by cDNA array analysis of post-mortem frontal cortex",
     "pythonProjects": [],
@@ -112,26 +187,67 @@
     ],
     "healthcareApps": [],
     "scienceFair": [],
-    "codingSkills": ["Python", "HTML/CSS", "JavaScript"],
+    "codingSkills": [
+      "Python",
+      "HTML/CSS",
+      "JavaScript"
+    ],
     "futureProjects": []
   },
-
   "healthcare": {
     "volunteerWork": "Volunteering at Brook Rehab over the summer, assisting with patient rehabilitation and gaining direct exposure to the recovery process for neurological and physical injuries.",
-    "clinicalExperience": "Describe any hands-on clinical experiences \u2014 skills labs, simulations, or supervised patient interaction through the Healthcare Academy.",
+    "clinicalExperience": "Describe any hands-on clinical experiences — skills labs, simulations, or supervised patient interaction through the Healthcare Academy.",
     "shadowing": "List physicians, specialties, and settings you have shadowed in, with key takeaways from each experience.",
-    "certifications": "List healthcare-related certifications \u2014 CPR, First Aid, HIPAA training, and any others earned through the Academy.",
-    "leadership": "Active member of HOSA \u2014 Future Health Professionals, participating in health-science competitive events, community health initiatives, and building a network within health professions.",
+    "certifications": "List healthcare-related certifications — CPR, First Aid, HIPAA training, and any others earned through the Academy.",
+    "leadership": "Active member of HOSA — Future Health Professionals, participating in health-science competitive events, community health initiatives, and building a network within health professions.",
     "communityService": "Describe community service initiatives you have led or participated in, beyond clinical volunteering.",
     "journey": [
-      { "year": "Elementary School", "title": "Presidential Award for Educational Excellence", "text": "Received at elementary school graduation for outstanding academic achievement." },
-      { "year": "Freshman Year", "title": "Enrolled in the Healthcare Academy", "text": "Began the Healthcare Academy program and scored 1270 on the PSAT/NMSQT." },
-      { "year": "Freshman Year", "title": "Joined HOSA", "text": "Became an active member of HOSA \u2014 Future Health Professionals." },
-      { "year": "Summer 2026", "title": "Volunteering at Brook Rehab", "text": "Began clinical volunteering in rehabilitation care." }
+      {
+        "year": "Elementary School",
+        "title": "Presidential Award for Educational Excellence",
+        "text": "Received at elementary school graduation for outstanding academic achievement."
+      },
+      {
+        "year": "Freshman Year",
+        "title": "Enrolled in the Healthcare Academy",
+        "text": "Began the Healthcare Academy program and scored 1270 on the PSAT/NMSQT."
+      },
+      {
+        "year": "Freshman Year",
+        "title": "Joined HOSA",
+        "text": "Became an active member of HOSA — Future Health Professionals."
+      },
+      {
+        "year": "Summer 2026",
+        "title": "Volunteering at Brook Rehab",
+        "text": "Began clinical volunteering in rehabilitation care."
+      }
     ]
   },
-
   "contact": {
     "email": "AkshathKarthik@proton.me"
+  },
+  "hobbies": {
+    "intro": "Outside academics and clinical work, a few things that keep him grounded.",
+    "list": [
+      {
+        "name": "Guitar",
+        "icon": "guitar"
+      },
+      {
+        "name": "Mridangam",
+        "icon": "drum",
+        "note": "Classical South Indian percussion"
+      },
+      {
+        "name": "Chess",
+        "icon": "chess"
+      },
+      {
+        "name": "Swimming",
+        "icon": "waves",
+        "note": "Member of a local competitive swim team"
+      }
+    ]
   }
 }

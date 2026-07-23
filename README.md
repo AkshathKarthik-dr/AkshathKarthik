@@ -88,7 +88,8 @@ quotes. Save, commit, push — nothing else needs to change. You never need to t
 |---|---|
 | `home` | Home page — role tags in the hero, mission blurb, academic snapshot stats, Milestones timeline, optional featured projects, optional news |
 | `about` | About page — biography, mission, career vision, values |
-| `languages` | Home page — the Languages section (intro + list of languages/proficiency) |
+| `languages` | Home page — the Languages table (intro + language/level/clinical-application rows) |
+| `hobbies` | About page — the Hobbies section (Guitar, Mridangam, Chess, Swimming, each with an icon) |
 | `academics` | Academics page — GPA, class rank, honors, coursework, AP classes, program description, certifications, awards |
 | `research` | Research page — status note, interests, faculty interests, current reading, projects (web/Python/healthcare-app/science-fair), coding skills, future projects |
 | `healthcare` | Healthcare page — volunteer work, clinical experience, shadowing, certifications, leadership, community service, journey timeline |

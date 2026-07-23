@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Languages } from "lucide-react";
 import PulseDivider from "@/components/PulseDivider";
 import { Section, Card, StatCard, Button, Tag, Timeline } from "@/components/UI";
 import rawContent from "@/content/site-content.json";
@@ -75,27 +76,50 @@ export default function Home() {
       </Section>
 
       <Section eyebrow="Multilingual" title="Languages">
-        <p className="max-w-2xl text-[15px] leading-relaxed text-muted">{languagesIntro}</p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {languages.map((lang) => (
-            <div
-              key={lang.name}
-              className={`relative rounded-xl border p-5 ${
-                lang.highlight
-                  ? "border-accent bg-accent/5 ring-1 ring-accent/30"
-                  : "border-border bg-background"
-              }`}
-            >
-              {lang.highlight && (
-                <span className="absolute -top-3 left-4 rounded-full bg-accent px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white">
-                  Signature Strength
-                </span>
-              )}
-              <p className="font-display text-base font-semibold text-foreground">{lang.name}</p>
-              <p className="mt-1.5 text-sm font-medium text-accent">{lang.level}</p>
-              {lang.note && <p className="mt-1.5 text-xs leading-relaxed text-muted">{lang.note}</p>}
-            </div>
-          ))}
+        <div className="flex items-center gap-2.5">
+          <Languages className="h-5 w-5 text-accent" strokeWidth={1.75} />
+          <p className="max-w-2xl text-[15px] leading-relaxed text-muted">{languagesIntro}</p>
+        </div>
+
+        <div className="mt-8 overflow-x-auto rounded-xl border border-border">
+          <table className="w-full min-w-[560px] border-collapse text-left">
+            <thead>
+              <tr className="border-b border-border bg-surface">
+                <th scope="col" className="px-5 py-3 text-xs font-semibold uppercase tracking-[0.08em] text-muted">
+                  Language
+                </th>
+                <th scope="col" className="px-5 py-3 text-xs font-semibold uppercase tracking-[0.08em] text-muted">
+                  Level
+                </th>
+                <th scope="col" className="px-5 py-3 text-xs font-semibold uppercase tracking-[0.08em] text-muted">
+                  Clinical Application
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {languages.map((lang, i) => (
+                <tr
+                  key={lang.name}
+                  className={`${i !== languages.length - 1 ? "border-b border-border" : ""} ${
+                    lang.highlight ? "bg-accent/5" : ""
+                  }`}
+                >
+                  <td className="px-5 py-4 align-top">
+                    <span className="font-display text-[15px] font-semibold text-foreground">
+                      {lang.name}
+                    </span>
+                    {lang.featured && (
+                      <span className="ml-2 inline-flex items-center rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.06em] text-white">
+                        Featured
+                      </span>
+                    )}
+                  </td>
+                  <td className="px-5 py-4 align-top text-sm font-medium text-accent">{lang.level}</td>
+                  <td className="px-5 py-4 align-top text-sm text-muted">{lang.clinicalApplication}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </Section>
 

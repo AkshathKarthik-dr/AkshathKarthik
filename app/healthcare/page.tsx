@@ -52,6 +52,14 @@ export default function Healthcare() {
       <Section eyebrow="Roles" title="Leadership & Organizations">
         <Card>
           <p className="text-[15px] leading-relaxed text-muted">{leadership}</p>
+          <a
+            href="https://hosa.org"
+            target="_blank"
+            rel="noreferrer"
+            className="focus-ring mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
+          >
+            Learn more about HOSA &rarr;
+          </a>
         </Card>
       </Section>
 

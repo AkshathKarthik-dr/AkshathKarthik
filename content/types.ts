@@ -2,7 +2,14 @@ export type ProjectItem = { title: string; desc: string };
 export type FeaturedProject = { title: string; tag: string; description: string };
 export type NewsItem = { date: string; title: string; description: string };
 export type MilestoneItem = { year: string; title: string; description?: string };
-export type LanguageItem = { name: string; level: string; note?: string; highlight?: boolean };
+export type LanguageItem = {
+  name: string;
+  level: string;
+  clinicalApplication: string;
+  highlight?: boolean;
+  featured?: boolean;
+};
+export type HobbyItem = { name: string; icon: string; note?: string };
 
 export type SiteContent = {
   home: {
@@ -22,6 +29,10 @@ export type SiteContent = {
   languages: {
     intro: string;
     list: LanguageItem[];
+  };
+  hobbies: {
+    intro: string;
+    list: HobbyItem[];
   };
   academics: {
     classOf: string;

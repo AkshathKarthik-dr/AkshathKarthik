@@ -40,6 +40,16 @@ export default function Academics() {
               <Card key={h.title}>
                 <p className="text-sm font-semibold text-foreground">{h.title}</p>
                 {h.note && <p className="mt-1 text-sm text-muted">{h.note}</p>}
+                {h.title.toLowerCase().includes("psat") && (
+                  <a
+                    href="https://www.collegeboard.org/psat-nmsqt"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="focus-ring mt-3 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
+                  >
+                    About the PSAT/NMSQT &rarr;
+                  </a>
+                )}
               </Card>
             ))}
           </div>

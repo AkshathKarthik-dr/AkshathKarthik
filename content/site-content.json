@@ -53,8 +53,8 @@
   },
 
   "academics": {
-    "gpa": "Add GPA",
-    "classRank": "Add Rank",
+    //"gpa": "Add GPA",
+    //"classRank": "Add Rank",
     "classOf": "2029",
     "track": "Academy",
     "honors": [
@@ -63,18 +63,20 @@
     "coursework": [
       "Biology",
       "Chemistry",
-      "Precalculus / Calculus",
+      "Precalculus ",
       "English Language Arts",
       "World History",
       "Healthcare Academy Core"
     ],
     "apClasses": [
-      { "name": "AP Biology", "note": "Add grade, year, and notes here." },
+      { "name": "AP Human Geography", "note": "Add grade, year, and notes here." },
       { "name": "AP Chemistry", "note": "Add grade, year, and notes here." },
-      { "name": "AP Calculus", "note": "Add grade, year, and notes here." },
-      { "name": "AP Psychology", "note": "Add grade, year, and notes here." }
+      { "name": "AP PreCalculus", "note": "Add grade, year, and notes here." },
+      { "name": "AP Statistic", "note": "Add grade, year, and notes here." },
+      { "name": "AP Capstone Seminar", "note": "Add grade, year, and notes here." },
+      { "name": "AP World History - Modern", "note": "Add grade, year, and notes here." }
     ],
-    "healthcareAcademyDescription": "Describe the Healthcare Academy program \u2014 its structure, clinical components, and what it has taught you so far about medicine as a career.",
+    "healthcareAcademyDescription": "The UF Health Future Healthcare Professionals Academy at Tocoi Creek High School provides foundational training in human anatomy, physiology, and health science principles. Through hands-on coursework and partnership with UF Health, the program offers early exposure to clinical environments, medical terminology, and patient care fundamentals—building the essential foundation for my long-term goal of becoming a neurosurgeon.",
     "certifications": [
       "Python Programming Certification",
       "CPR / First Aid (planned)",
@@ -88,9 +90,9 @@
   "research": {
     "pageDescription": "Interests, mentorship, and the technical projects that support a path toward neurosurgery.",
     "comingSoonNote": "No formal research yet \u2014 this section will be filled in as projects and mentorships begin. Interests below reflect what draws Akshath toward neurology and neurosurgery.",
-    "interests": ["Neuroscience", "Neurosurgery", "Neuroimaging", "Traumatic Brain Injury", "Neural Repair"],
-    "facultyInterests": "List faculty members, labs, or professors whose research aligns with your interests, along with a short note on why their work is compelling to you.",
-    "currentReading": "Add papers, textbooks, and articles you are currently reading, with brief takeaways for each.",
+    "interests": ["Neuroscience", "Neurosurgery", "Neuroimaging", "Traumatic Brain Injury", "Functional Neurosurgery"],
+    "facultyInterests": "",
+    "currentReading": "Gene expression differences in bipolar disorder revealed by cDNA array analysis of post-mortem frontal cortex",
     "pythonProjects": [],
     "webProjects": [
       {
@@ -100,7 +102,7 @@
     ],
     "healthcareApps": [],
     "scienceFair": [],
-    "codingSkills": ["Python", "HTML/CSS", "JavaScript", "SQL", "Data Analysis"],
+    "codingSkills": ["Python", "HTML/CSS", "JavaScript"],
     "futureProjects": []
   },
 

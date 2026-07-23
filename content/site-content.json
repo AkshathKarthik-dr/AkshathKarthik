@@ -53,8 +53,6 @@
   },
 
   "academics": {
-    //"gpa": "Add GPA",
-    //"classRank": "Add Rank",
     "classOf": "2029",
     "track": "Academy",
     "honors": [

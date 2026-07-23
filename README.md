@@ -144,6 +144,20 @@ Blog posts live as plain Markdown files in `content/blog/`. To publish a new one
 The five starter posts already in `content/blog/` (AI in healthcare, cardiology, etc.)
 are set to `draft: true` — write the content and flip that flag when each is ready.
 
+## Contact form setup (one-time step)
+
+The Contact page form sends submissions straight to your inbox using
+[FormSubmit](https://formsubmit.co) &mdash; a free service that needs no backend, API
+key, or environment variables, which fits GitHub Pages (which can't run server code).
+
+**The first time someone submits the form** (best if that "someone" is you, as a test),
+FormSubmit will send a confirmation email to `AkshathKarthik@proton.me` asking you to
+click a link to activate delivery for this domain. Until you click it, submissions
+won't arrive in your inbox. After that one click, it works automatically forever.
+
+To test it: go to `/contact` on your live site, submit the form once with test details,
+then check your email (including spam) for FormSubmit's activation link.
+
 ## Photo, resume, and PDFs (not text — handled separately)
 
 The content JSON above covers all text. A few things live as files instead:

@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import PulseDivider from "./PulseDivider";
+import Reveal from "./Reveal";
 
 export function PageHero({
   eyebrow,
@@ -45,17 +46,19 @@ export function Section({
 }) {
   return (
     <section id={id} className={`mx-auto max-w-6xl scroll-mt-20 px-5 py-14 ${className}`}>
-      {eyebrow && (
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-          {eyebrow}
-        </p>
-      )}
-      {title && (
-        <h2 className="mt-2 font-display text-2xl font-semibold text-foreground sm:text-3xl">
-          {title}
-        </h2>
-      )}
-      <div className={title || eyebrow ? "mt-8" : ""}>{children}</div>
+      <Reveal>
+        {eyebrow && (
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            {eyebrow}
+          </p>
+        )}
+        {title && (
+          <h2 className="mt-2 font-display text-2xl font-semibold text-foreground sm:text-3xl">
+            {title}
+          </h2>
+        )}
+        <div className={title || eyebrow ? "mt-8" : ""}>{children}</div>
+      </Reveal>
     </section>
   );
 }
@@ -108,7 +111,8 @@ export function Timeline({
           const isLeft = i % 2 === 0;
           const isLast = i === items.length - 1;
           return (
-            <div key={`${item.year}-${item.title}`} className="grid grid-cols-[1fr_2.5rem_1fr] gap-6">
+            <Reveal key={`${item.year}-${item.title}`} delay={Math.min(i * 90, 360)}>
+            <div className="grid grid-cols-[1fr_2.5rem_1fr] gap-6">
               <div className={isLeft ? "pb-10 text-right" : "pb-10"}>
                 {isLeft && (
                   <div>
@@ -146,6 +150,7 @@ export function Timeline({
                 )}
               </div>
             </div>
+            </Reveal>
           );
         })}
       </div>

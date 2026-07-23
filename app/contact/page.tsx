@@ -1,4 +1,5 @@
 import { PageHero, Section, Card, Button } from "@/components/UI";
+import ContactForm from "@/components/ContactForm";
 import rawContent from "@/content/site-content.json";
 import type { SiteContent } from "@/content/types";
 
@@ -14,35 +15,30 @@ export default function Contact() {
       <PageHero
         eyebrow="Contact"
         title="Get in Touch"
-        description="Reach out about research collaboration, mentorship, or general questions."
+        description="Reach out about research collaboration, mentorship, or general questions \u2014 messages go straight to my inbox."
       />
 
-      <Section eyebrow="Reach Out" title="Contact Details">
+      <Section eyebrow="Send a Message" title="Contact Form">
+        <div className="max-w-2xl">
+          <ContactForm email={email} />
+        </div>
+      </Section>
+
+      <Section eyebrow="Reach Out" title="Prefer Email Directly?" className="bg-surface">
         <Card className="max-w-md">
-          <h3 className="text-base font-semibold text-foreground">Email</h3>
-          <p className="mt-2 text-sm text-muted">
-            The best way to reach me directly.
-          </p>
+          <p className="text-sm text-muted">You can also reach me directly at</p>
           <div className="mt-4">
-            <Button href={`mailto:${email}`}>Send an Email</Button>
+            <Button href={`mailto:${email}`} variant="secondary">
+              {email}
+            </Button>
           </div>
         </Card>
       </Section>
 
-      <Section eyebrow="Coming Later" title="LinkedIn" className="bg-surface">
+      <Section eyebrow="Coming Later" title="LinkedIn">
         <div className="rounded-xl border border-dashed border-border p-6 text-sm text-muted">
           A LinkedIn profile link will be added here.
         </div>
-      </Section>
-
-      <Section eyebrow="For Mentors & Faculty" title="Research Inquiry">
-        <Card>
-          <p className="text-[15px] leading-relaxed text-muted">
-            If you are a researcher, faculty member, or physician interested in mentorship
-            or collaboration, please reach out by email &mdash; a dedicated contact form
-            is planned for a future update.
-          </p>
-        </Card>
       </Section>
     </>
   );

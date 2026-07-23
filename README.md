@@ -86,12 +86,18 @@ quotes. Save, commit, push \u2014 nothing else needs to change. You never need t
 
 | Section in the file | Shows up on |
 |---|---|
-| `home` | Home page \u2014 role tags in the hero, mission blurb, academic snapshot stats, featured projects, latest news |
+| `home` | Home page \u2014 role tags in the hero, mission blurb, academic snapshot stats, Milestones timeline, optional featured projects, optional news |
 | `about` | About page \u2014 biography, mission, career vision, values |
-| `academics` | Academics page \u2014 GPA, class rank, coursework, AP classes, program description, certifications, awards |
-| `research` | Research page \u2014 interests, faculty interests, current reading, Python/healthcare-app/science-fair projects, coding skills, future projects |
+| `academics` | Academics page \u2014 GPA, class rank, honors, coursework, AP classes, program description, certifications, awards |
+| `research` | Research page \u2014 status note, interests, faculty interests, current reading, projects (web/Python/healthcare-app/science-fair), coding skills, future projects |
 | `healthcare` | Healthcare page \u2014 volunteer work, clinical experience, shadowing, certifications, leadership, community service, journey timeline |
 | `contact` | Contact page and footer \u2014 your email address |
+
+**Empty lists hide themselves.** `home.featuredProjects`, `home.news`, and every list under
+`research` (Python projects, web projects, healthcare apps, science fair, future
+projects) will simply not render a section if left as `[]` \u2014 so it's safe to leave
+things empty until you have real content, instead of showing "add something here"
+placeholder text to visitors.
 
 **Adding or removing list items** (awards, projects, coursework tags, values, etc.):
 these are all written as a list in `[ ]` brackets. Copy one existing entry inside the

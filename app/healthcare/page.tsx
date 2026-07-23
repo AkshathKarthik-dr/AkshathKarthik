@@ -1,5 +1,8 @@
-import { PageHero, Section, Card } from "@/components/UI";
-import content from "@/content/site-content.json";
+import { PageHero, Section, Card, Timeline } from "@/components/UI";
+import rawContent from "@/content/site-content.json";
+import type { SiteContent } from "@/content/types";
+
+const content = rawContent as SiteContent;
 
 export const metadata = { title: "Healthcare | Akshath Karthik" };
 
@@ -59,17 +62,7 @@ export default function Healthcare() {
       </Section>
 
       <Section eyebrow="Timeline" title="Healthcare Journey">
-        <div className="space-y-6 border-l-2 border-border pl-6">
-          {journey.map((j) => (
-            <div key={j.year} className="relative">
-              <span className="absolute -left-[31px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" />
-              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-accent">
-                {j.year}
-              </p>
-              <p className="mt-1 text-[15px] text-muted">{j.text}</p>
-            </div>
-          ))}
-        </div>
+        <Timeline items={journey.map((j) => ({ year: j.year, title: j.title, description: j.text }))} />
       </Section>
     </>
   );

@@ -1,6 +1,9 @@
 import Link from "next/link";
 import PulseDivider from "./PulseDivider";
-import content from "@/content/site-content.json";
+import rawContent from "@/content/site-content.json";
+import type { SiteContent } from "@/content/types";
+
+const content = rawContent as SiteContent;
 
 const LINKS = [
   { href: "/about", label: "About" },

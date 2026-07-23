@@ -87,6 +87,29 @@ export function Tag({ children }: { children: ReactNode }) {
   );
 }
 
+export function Timeline({
+  items,
+}: {
+  items: { year: string; title: string; description?: string }[];
+}) {
+  return (
+    <div className="space-y-6 border-l-2 border-border pl-6">
+      {items.map((item) => (
+        <div key={`${item.year}-${item.title}`} className="relative">
+          <span className="absolute -left-[31px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent" />
+          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-accent">
+            {item.year}
+          </p>
+          <p className="mt-1 text-[15px] font-medium text-foreground">{item.title}</p>
+          {item.description && (
+            <p className="mt-1 text-sm leading-relaxed text-muted">{item.description}</p>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function Button({
   href,
   children,

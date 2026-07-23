@@ -1,59 +1,54 @@
 {
   "home": {
-    "roles": ["Healthcare Scholar", "Aspiring Physician\u2013Scientist", "Research Enthusiast"],
-    "missionCard": "Bridging medicine and technology \u2014 using research and software to understand disease more clearly and care for patients more effectively.",
+    "roles": ["Healthcare Scholar", "Aspiring Neurosurgeon", "Research Enthusiast"],
+    "missionCard": "To understand the brain and nervous system deeply enough to repair it \u2014 pairing scientific rigor with surgical discipline to give patients back function, independence, and time.",
     "snapshot": [
       { "value": "2029", "label": "Class of" },
       { "value": "Academy", "label": "Healthcare" },
-      { "value": "Certified", "label": "Python" },
+      { "value": "1270", "label": "PSAT/NMSQT" },
+      { "value": "HOSA", "label": "Member" },
       { "value": "Active", "label": "Volunteer" },
-      { "value": "Focused", "label": "Research" },
-      { "value": "Multi", "label": "Languages" }
+      { "value": "Neuro", "label": "Focus" }
     ],
-    "featuredProjects": [
+    "milestones": [
       {
-        "title": "Clinical Symptom Tracker",
-        "tag": "Healthcare App",
-        "description": "A Python-based tool for logging and visualizing patient-reported symptoms over time, built to explore how software can support clinical decision-making."
+        "year": "2026",
+        "title": "Built this website",
+        "description": "Designed and built this personal portfolio from scratch with Next.js, deployed on GitHub Pages."
       },
       {
-        "title": "Alzheimer's Imaging Classifier",
-        "tag": "Research",
-        "description": "An exploratory machine learning project applying image classification techniques to publicly available neuroimaging datasets."
+        "year": "2026",
+        "title": "Clinical volunteer, Brook Rehab",
+        "description": "Volunteering at Brook Rehab over the summer, gaining direct exposure to patient rehabilitation and recovery care."
       },
       {
-        "title": "Volunteer Hours Dashboard",
-        "tag": "Coding",
-        "description": "A lightweight dashboard for tracking clinical volunteering and shadowing hours, built to practice full-stack development fundamentals."
+        "year": "2026",
+        "title": "Joined HOSA",
+        "description": "Active member of HOSA \u2014 Future Health Professionals, participating in health-science competitive events and community initiatives."
+      },
+      {
+        "year": "9th Grade",
+        "title": "PSAT/NMSQT \u2014 1270",
+        "description": "Scored 1270 on the PSAT/NMSQT as a freshman."
+      },
+      {
+        "year": "Elementary School",
+        "title": "Presidential Award for Educational Excellence",
+        "description": "Received at elementary school graduation for outstanding academic achievement."
       }
     ],
-    "news": [
-      {
-        "date": "Coming soon",
-        "title": "Research Profile publication",
-        "description": "Formal research interests and faculty mentorship details will be posted here."
-      },
-      {
-        "date": "Coming soon",
-        "title": "First monthly blog article",
-        "description": "Long-form writing on healthcare, medicine, and the research process begins soon."
-      },
-      {
-        "date": "Coming soon",
-        "title": "Science fair results",
-        "description": "Updates on current and upcoming science fair projects will be added as they develop."
-      }
-    ]
+    "featuredProjects": [],
+    "news": []
   },
 
   "about": {
-    "bio": "Akshath Karthik is a Healthcare Academy student, Class of 2029, pursuing a path toward medicine through a combination of coursework, clinical exposure, and independent research. Replace this paragraph with 2\u20133 sentences about your background, interests, and what draws you to healthcare and science.",
-    "mission": "Describe the mission that drives your work \u2014 the intersection of medicine, research, and technology you want to pursue, and who you hope to serve.",
-    "careerVision": "Outline your long-term vision \u2014 physician\u2013scientist, specialty interests, and the kind of impact you hope to have in medicine and research.",
+    "bio": "Akshath Karthik is a Healthcare Academy student, Class of 2029, working toward a career in medicine with a focus on neurology and neurosurgery. He is an active member of HOSA \u2014 Future Health Professionals and volunteers in clinical rehabilitation at Brook Rehab, pairing classroom coursework with direct exposure to patient care.",
+    "mission": "To understand the brain and nervous system deeply enough to repair it \u2014 combining scientific rigor with the discipline of surgery to give patients back function, independence, and time.",
+    "careerVision": "To become a neurosurgeon \u2014 building the academic and clinical foundation now through the Healthcare Academy, HOSA, and hands-on volunteering, with the long-term goal of treating patients with neurological conditions and eventually contributing to research on neural repair and recovery.",
     "values": [
-      { "title": "Curiosity", "description": "Add a short description of what this value means in your work and life." },
-      { "title": "Integrity", "description": "Add a short description of what this value means in your work and life." },
-      { "title": "Service", "description": "Add a short description of what this value means in your work and life." }
+      { "title": "Curiosity", "description": "Approaching the nervous system \u2014 and every patient \u2014 as a problem worth understanding deeply, not just treating." },
+      { "title": "Precision", "description": "The discipline that surgery demands: careful preparation, attention to detail, and no shortcuts." },
+      { "title": "Compassion", "description": "Remembering that behind every diagnosis is a person, learned firsthand through volunteering in clinical rehabilitation." }
     ]
   },
 
@@ -62,6 +57,9 @@
     "classRank": "Add Rank",
     "classOf": "2029",
     "track": "Academy",
+    "honors": [
+      { "title": "1270 on the PSAT/NMSQT", "note": "Scored as a 9th grader." }
+    ],
     "coursework": [
       "Biology",
       "Chemistry",
@@ -83,44 +81,41 @@
       "HIPAA Basics (planned)"
     ],
     "awards": [
-      { "title": "Add your first award here", "year": "2026" },
-      { "title": "Add another award here", "year": "2026" }
+      { "title": "Presidential Award for Educational Excellence", "year": "Elementary School Graduation" }
     ]
   },
 
   "research": {
-    "pageDescription": "Interests, mentorship, and the technical projects that support a path toward physician-scientist work.",
-    "interests": ["Neuroscience", "Cardiology", "Medical AI", "Diagnostic Imaging", "Genomics"],
+    "pageDescription": "Interests, mentorship, and the technical projects that support a path toward neurosurgery.",
+    "comingSoonNote": "No formal research yet \u2014 this section will be filled in as projects and mentorships begin. Interests below reflect what draws Akshath toward neurology and neurosurgery.",
+    "interests": ["Neuroscience", "Neurosurgery", "Neuroimaging", "Traumatic Brain Injury", "Neural Repair"],
     "facultyInterests": "List faculty members, labs, or professors whose research aligns with your interests, along with a short note on why their work is compelling to you.",
     "currentReading": "Add papers, textbooks, and articles you are currently reading, with brief takeaways for each.",
-    "pythonProjects": [
-      { "title": "Clinical Symptom Tracker", "desc": "Python tool for logging and visualizing patient-reported symptoms." },
-      { "title": "Volunteer Hours Dashboard", "desc": "A lightweight dashboard for tracking clinical volunteering and shadowing hours." }
+    "pythonProjects": [],
+    "webProjects": [
+      {
+        "title": "This Website",
+        "desc": "Designed and built this personal portfolio using Next.js, React, and Tailwind CSS, deployed automatically via GitHub Actions to GitHub Pages."
+      }
     ],
-    "healthcareApps": [
-      { "title": "Medication Reminder Concept", "desc": "A concept app for helping patients track medication schedules." }
-    ],
-    "scienceFair": [
-      { "title": "Science Fair Project", "desc": "Add title, hypothesis, methodology, and results here." }
-    ],
+    "healthcareApps": [],
+    "scienceFair": [],
     "codingSkills": ["Python", "HTML/CSS", "JavaScript", "SQL", "Data Analysis"],
-    "futureProjects": [
-      { "title": "Planned Project 1", "desc": "Add a short description and target timeline." },
-      { "title": "Planned Project 2", "desc": "Add a short description and target timeline." }
-    ]
+    "futureProjects": []
   },
 
   "healthcare": {
-    "volunteerWork": "List hospitals, clinics, or organizations where you volunteer, along with your role, hours, and what you learned.",
+    "volunteerWork": "Volunteering at Brook Rehab over the summer, assisting with patient rehabilitation and gaining direct exposure to the recovery process for neurological and physical injuries.",
     "clinicalExperience": "Describe any hands-on clinical experiences \u2014 skills labs, simulations, or supervised patient interaction through the Healthcare Academy.",
     "shadowing": "List physicians, specialties, and settings you have shadowed in, with key takeaways from each experience.",
     "certifications": "List healthcare-related certifications \u2014 CPR, First Aid, HIPAA training, and any others earned through the Academy.",
-    "leadership": "List leadership positions and club or honor-society involvement \u2014 officer roles, team captaincies, or student government \u2014 along with responsibilities and impact.",
+    "leadership": "Active member of HOSA \u2014 Future Health Professionals, participating in health-science competitive events, community health initiatives, and building a network within health professions.",
     "communityService": "Describe community service initiatives you have led or participated in, beyond clinical volunteering.",
     "journey": [
-      { "year": "Freshman Year", "text": "Enrolled in the Healthcare Academy program." },
-      { "year": "Sophomore Year", "text": "Began clinical shadowing and volunteer work." },
-      { "year": "Junior Year", "text": "Expanding clinical exposure and certifications." }
+      { "year": "Elementary School", "title": "Presidential Award for Educational Excellence", "text": "Received at elementary school graduation for outstanding academic achievement." },
+      { "year": "Freshman Year", "title": "Enrolled in the Healthcare Academy", "text": "Began the Healthcare Academy program and scored 1270 on the PSAT/NMSQT." },
+      { "year": "Freshman Year", "title": "Joined HOSA", "text": "Became an active member of HOSA \u2014 Future Health Professionals." },
+      { "year": "Summer 2026", "title": "Volunteering at Brook Rehab", "text": "Began clinical volunteering in rehabilitation care." }
     ]
   },
 

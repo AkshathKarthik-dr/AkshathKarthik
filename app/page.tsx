@@ -1,9 +1,12 @@
 import Link from "next/link";
 import PulseDivider from "@/components/PulseDivider";
-import { Section, Card, StatCard, Button, Tag } from "@/components/UI";
-import content from "@/content/site-content.json";
+import { Section, Card, StatCard, Button, Tag, Timeline } from "@/components/UI";
+import rawContent from "@/content/site-content.json";
+import type { SiteContent } from "@/content/types";
 
-const { roles, missionCard, snapshot, featuredProjects, news } = content.home;
+const content = rawContent as SiteContent;
+
+const { roles, missionCard, snapshot, milestones, featuredProjects, news } = content.home;
 
 export default function Home() {
   return (
@@ -54,36 +57,44 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section eyebrow="Selected Work" title="Featured Projects" className="bg-surface">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map((p) => (
-            <Card key={p.title}>
-              <Tag>{p.tag}</Tag>
-              <h3 className="mt-4 text-lg font-semibold text-foreground">{p.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{p.description}</p>
-            </Card>
-          ))}
-        </div>
-        <div className="mt-8">
-          <Link href="/research#projects" className="focus-ring text-sm font-semibold text-accent hover:underline">
-            View all projects &rarr;
-          </Link>
-        </div>
+      <Section eyebrow="Journey" title="Milestones" className="bg-surface">
+        <Timeline items={milestones} />
       </Section>
 
-      <Section eyebrow="Updates" title="Latest News">
-        <div className="grid gap-5 sm:grid-cols-3">
-          {news.map((n) => (
-            <div key={n.title} className="border-l-2 border-accent/40 pl-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
-                {n.date}
-              </p>
-              <h3 className="mt-2 text-base font-semibold text-foreground">{n.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{n.description}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
+      {featuredProjects.length > 0 && (
+        <Section eyebrow="Selected Work" title="Featured Projects">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {featuredProjects.map((p) => (
+              <Card key={p.title}>
+                <Tag>{p.tag}</Tag>
+                <h3 className="mt-4 text-lg font-semibold text-foreground">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{p.description}</p>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-8">
+            <Link href="/research#projects" className="focus-ring text-sm font-semibold text-accent hover:underline">
+              View all projects &rarr;
+            </Link>
+          </div>
+        </Section>
+      )}
+
+      {news.length > 0 && (
+        <Section eyebrow="Updates" title="Latest News" className={featuredProjects.length > 0 ? "bg-surface" : ""}>
+          <div className="grid gap-5 sm:grid-cols-3">
+            {news.map((n) => (
+              <div key={n.title} className="border-l-2 border-accent/40 pl-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-muted">
+                  {n.date}
+                </p>
+                <h3 className="mt-2 text-base font-semibold text-foreground">{n.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{n.description}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
     </>
   );
 }

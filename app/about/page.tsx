@@ -1,5 +1,8 @@
 import { PageHero, Section, Card } from "@/components/UI";
-import content from "@/content/site-content.json";
+import rawContent from "@/content/site-content.json";
+import type { SiteContent } from "@/content/types";
+
+const content = rawContent as SiteContent;
 
 export const metadata = { title: "About | Akshath Karthik" };
 

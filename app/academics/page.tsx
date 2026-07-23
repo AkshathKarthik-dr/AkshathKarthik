@@ -1,5 +1,8 @@
 import { PageHero, Section, Card, StatCard, Tag } from "@/components/UI";
-import content from "@/content/site-content.json";
+import rawContent from "@/content/site-content.json";
+import type { SiteContent } from "@/content/types";
+
+const content = rawContent as SiteContent;
 
 export const metadata = { title: "Academics | Akshath Karthik" };
 
@@ -8,6 +11,7 @@ const {
   classRank,
   classOf,
   track,
+  honors,
   coursework,
   apClasses,
   healthcareAcademyDescription,
@@ -33,7 +37,20 @@ export default function Academics() {
         </div>
       </Section>
 
-      <Section eyebrow="Program" title="Coursework" className="bg-surface">
+      {honors.length > 0 && (
+        <Section eyebrow="Recognition" title="Honors" className="bg-surface">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {honors.map((h) => (
+              <Card key={h.title}>
+                <p className="text-sm font-semibold text-foreground">{h.title}</p>
+                {h.note && <p className="mt-1 text-sm text-muted">{h.note}</p>}
+              </Card>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      <Section eyebrow="Program" title="Coursework">
         <div className="flex flex-wrap gap-2">
           {coursework.map((c) => (
             <Tag key={c}>{c}</Tag>
@@ -41,7 +58,7 @@ export default function Academics() {
         </div>
       </Section>
 
-      <Section eyebrow="Advanced" title="AP Classes">
+      <Section eyebrow="Advanced" title="AP Classes" className="bg-surface">
         <div className="grid gap-4 sm:grid-cols-2">
           {apClasses.map((ap) => (
             <Card key={ap.name}>
@@ -52,13 +69,13 @@ export default function Academics() {
         </div>
       </Section>
 
-      <Section eyebrow="Specialization" title="Healthcare Academy" className="bg-surface">
+      <Section eyebrow="Specialization" title="Healthcare Academy">
         <Card>
           <p className="text-[15px] leading-relaxed text-muted">{healthcareAcademyDescription}</p>
         </Card>
       </Section>
 
-      <Section eyebrow="Credentials" title="Certifications">
+      <Section eyebrow="Credentials" title="Certifications" className="bg-surface">
         <div className="grid gap-4 sm:grid-cols-3">
           {certifications.map((c) => (
             <Card key={c}>
@@ -68,7 +85,7 @@ export default function Academics() {
         </div>
       </Section>
 
-      <Section eyebrow="Recognition" title="Awards" className="bg-surface">
+      <Section eyebrow="Recognition" title="Awards">
         <div className="grid gap-4 sm:grid-cols-2">
           {awards.map((a) => (
             <Card key={a.title} className="flex items-center justify-between gap-4">

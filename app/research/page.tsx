@@ -1,14 +1,19 @@
 import { PageHero, Section, Card, Tag } from "@/components/UI";
-import content from "@/content/site-content.json";
+import rawContent from "@/content/site-content.json";
+import type { SiteContent } from "@/content/types";
+
+const content = rawContent as SiteContent;
 
 export const metadata = { title: "Research | Akshath Karthik" };
 
 const {
   pageDescription,
+  comingSoonNote,
   interests,
   facultyInterests,
   currentReading,
   pythonProjects,
+  webProjects,
   healthcareApps,
   scienceFair,
   codingSkills,
@@ -28,12 +33,41 @@ function ProjectGrid({ items }: { items: { title: string; desc: string }[] }) {
   );
 }
 
+function ProjectSubsection({
+  label,
+  items,
+}: {
+  label: string;
+  items: { title: string; desc: string }[];
+}) {
+  if (items.length === 0) return null;
+  return (
+    <div>
+      <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-muted">{label}</h3>
+      <div className="mt-4">
+        <ProjectGrid items={items} />
+      </div>
+    </div>
+  );
+}
+
 export default function Research() {
+  const hasAnyProjects =
+    webProjects.length + pythonProjects.length + healthcareApps.length + scienceFair.length > 0;
+
   return (
     <>
       <PageHero eyebrow="Research" title="Research & Projects" description={pageDescription} />
 
-      <Section eyebrow="Focus Areas" title="Research Interests">
+      {comingSoonNote && (
+        <Section eyebrow="Status" title="Where things stand">
+          <Card>
+            <p className="text-[15px] leading-relaxed text-muted">{comingSoonNote}</p>
+          </Card>
+        </Section>
+      )}
+
+      <Section eyebrow="Focus Areas" title="Research Interests" className="bg-surface">
         <div className="flex flex-wrap gap-2">
           {interests.map((i) => (
             <Tag key={i}>{i}</Tag>
@@ -41,48 +75,34 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section eyebrow="Mentorship" title="Faculty Interests" className="bg-surface">
+      <Section eyebrow="Mentorship" title="Faculty Interests">
         <Card>
           <p className="text-[15px] leading-relaxed text-muted">{facultyInterests}</p>
         </Card>
       </Section>
 
-      <Section eyebrow="Reading" title="Current Reading">
+      <Section eyebrow="Reading" title="Current Reading" className="bg-surface">
         <Card>
           <p className="text-[15px] leading-relaxed text-muted">{currentReading}</p>
         </Card>
       </Section>
 
-      <Section id="projects" eyebrow="Applied Work" title="Projects" className="bg-surface">
-        <div className="space-y-10">
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-muted">
-              Python Projects
-            </h3>
-            <div className="mt-4">
-              <ProjectGrid items={pythonProjects} />
-            </div>
+      <Section id="projects" eyebrow="Applied Work" title="Projects">
+        {hasAnyProjects ? (
+          <div className="space-y-10">
+            <ProjectSubsection label="Web Development" items={webProjects} />
+            <ProjectSubsection label="Python Projects" items={pythonProjects} />
+            <ProjectSubsection label="Healthcare Apps" items={healthcareApps} />
+            <ProjectSubsection label="Science Fair" items={scienceFair} />
           </div>
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-muted">
-              Healthcare Apps
-            </h3>
-            <div className="mt-4">
-              <ProjectGrid items={healthcareApps} />
-            </div>
+        ) : (
+          <div className="rounded-xl border border-dashed border-border p-6 text-sm text-muted">
+            Projects will be added here as they're completed.
           </div>
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-muted">
-              Science Fair
-            </h3>
-            <div className="mt-4">
-              <ProjectGrid items={scienceFair} />
-            </div>
-          </div>
-        </div>
+        )}
       </Section>
 
-      <Section eyebrow="Skills" title="Coding">
+      <Section eyebrow="Skills" title="Coding" className="bg-surface">
         <div className="flex flex-wrap gap-2">
           {codingSkills.map((s) => (
             <Tag key={s}>{s}</Tag>
@@ -90,24 +110,26 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section eyebrow="Roadmap" title="Future Projects" className="bg-surface">
-        <div className="grid gap-4 sm:grid-cols-2">
-          {futureProjects.map((p) => (
-            <Card key={p.title}>
-              <h3 className="text-base font-semibold text-foreground">{p.title}</h3>
-              <p className="mt-2 text-sm text-muted">{p.desc}</p>
-            </Card>
-          ))}
-        </div>
-      </Section>
+      {futureProjects.length > 0 && (
+        <Section eyebrow="Roadmap" title="Future Projects">
+          <div className="grid gap-4 sm:grid-cols-2">
+            {futureProjects.map((p) => (
+              <Card key={p.title}>
+                <h3 className="text-base font-semibold text-foreground">{p.title}</h3>
+                <p className="mt-2 text-sm text-muted">{p.desc}</p>
+              </Card>
+            ))}
+          </div>
+        </Section>
+      )}
 
-      <Section eyebrow="Coming Later" title="Publications">
+      <Section eyebrow="Coming Later" title="Publications" className="bg-surface">
         <div className="rounded-xl border border-dashed border-border p-6 text-sm text-muted">
           Publications will be listed here once available.
         </div>
       </Section>
 
-      <Section eyebrow="Coming Later" title="Posters" className="bg-surface">
+      <Section eyebrow="Coming Later" title="Posters">
         <div className="rounded-xl border border-dashed border-border p-6 text-sm text-muted">
           Conference and science-fair posters will be listed here once available.
         </div>

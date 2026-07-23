@@ -19,8 +19,8 @@ export type SiteContent = {
     values: { title: string; description: string }[];
   };
   academics: {
-    gpa: string;
-    classRank: string;
+    gpa?: string;
+    classRank?: string;
     classOf: string;
     track: string;
     honors: { title: string; note?: string }[];
